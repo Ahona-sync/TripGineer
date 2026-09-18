@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Map | TripGineer</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Our Map CSS -->
+    <link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="map-navbar">
+
+        <div class="map-logo">
+            Trip<span>Gineer</span>
+            <small>Explore Chattogram</small>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#importantLinks">Important Links</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="map-page-header">
+
+        <p>EXPLORE CHATTOGRAM</p>
+
+        <h1>Digital Travel Map</h1>
+
+        <div class="map-red-line"></div>
+
+        <span>
+            Discover destinations, plan routes and explore
+            Chattogram with our interactive map.
+        </span>
+
+    </section>
+
+
+    <!-- ================= MAP AREA ================= -->
+
+    <section class="digital-map-section">
+
+        <!-- LEFT CONTROL PANEL -->
+
+        <aside class="map-sidebar">
+
+            <h2>Explore Map</h2>
+
+            <p class="sidebar-subtitle">
+                Search and plan your journey
+            </p>
+
+
+            <!-- Search -->
+
+            <div class="map-control">
+
+                <label>Search Destination</label>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchPlace"
+                        placeholder="Search a place..."
+                    >
+
+                    <button onclick="searchPlace()">🔍</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Upazila -->
+
+            <div class="map-control">
+
+                <label>Select by Upazila</label>
+
+                <select id="upazilaSelect" onchange="selectUpazila()">
+
+                    <option value="">All Chattogram</option>
+
+                    <option value="anwara">Anwara</option>
+                    <option value="banshkhali">Banshkhali</option>
+                    <option value="boalkhali">Boalkhali</option>
+                    <option value="chandanaish">Chandanaish</option>
+                    <option value="fatikchhari">Fatikchhari</option>
+                    <option value="hathazari">Hathazari</option>
+                    <option value="lohagara">Lohagara</option>
+                    <option value="mirsharai">Mirsharai</option>
+                    <option value="patiya">Patiya</option>
+                    <option value="rangunia">Rangunia</option>
+                    <option value="raozan">Raozan</option>
+                    <option value="sandwip">Sandwip</option>
+                    <option value="satkania">Satkania</option>
+                    <option value="sitakunda">Sitakunda</option>
+                    <option value="karnaphuli">Karnaphuli</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Category -->
+
+            <div class="map-control">
+
+                <label>Filter by Category</label>
+
+                <select id="categorySelect" onchange="filterCategory()">
+
+                    <option value="all">All Places</option>
+                    <option value="tourist">Tourist Places</option>
+                    <option value="hotel">Hotels</option>
+                    <option value="restaurant">Restaurants</option>
+                    <option value="hospital">Hospitals</option>
+                    <option value="transport">Transport</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Route Planner -->
+
+            <div class="route-box">
+
+                <h3>🛣️ Plan Your Route</h3>
+
+                <label>From</label>
+
+                <select id="fromPlace">
+
+                    <option value="">Select starting point</option>
+                    <option value="ctg">Chattogram City</option>
+                    <option value="patenga">Patenga Beach</option>
+                    <option value="sitakunda">Sitakunda</option>
+                    <option value="foyslake">Foy's Lake</option>
+                    <option value="parkirchar">Parki Beach</option>
+
+                </select>
+
+
+                <label>To</label>
+
+                <select id="toPlace">
+
+                    <option value="">Select destination</option>
+                    <option value="ctg">Chattogram City</option>
+                    <option value="patenga">Patenga Beach</option>
+                    <option value="sitakunda">Sitakunda</option>
+                    <option value="foyslake">Foy's Lake</option>
+                    <option value="parkirchar">Parki Beach</option>
+
+                </select>
+
+
+                <button
+                    class="route-button"
+                    onclick="showRoute()">
+                    Show Route
+                </button>
+
+            </div>
+
+
+            <!-- Reset -->
+
+            <button
+                class="reset-button"
+                onclick="resetMap()">
+                ↻ Reset Map
+            </button>
+
+
+            <!-- Legend -->
+
+            <div class="map-legend">
+
+                <h3>Map Legend</h3>
+
+                <div>
+                    <span class="legend-dot tourist-dot"></span>
+                    Tourist Places
+                </div>
+
+                <div>
+                    <span class="legend-dot hotel-dot"></span>
+                    Hotels
+                </div>
+
+                <div>
+                    <span class="legend-dot restaurant-dot"></span>
+                    Restaurants
+                </div>
+
+                <div>
+                    <span class="legend-dot hospital-dot"></span>
+                    Hospitals
+                </div>
+
+                <div>
+                    <span class="legend-dot transport-dot"></span>
+                    Transport
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT MAP -->
+
+        <div class="map-container">
+
+            <div id="travelMap"></div>
+
+            <!-- Map Top Info -->
+
+            <div class="map-info-box">
+
+                <strong>📍 Chattogram</strong>
+
+                <span>
+                    Select a marker to explore
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ROUTE RESULT ================= -->
+
+    <section
+        class="route-result"
+        id="routeResult">
+
+        <h2>Route Information</h2>
+
+        <div class="route-details">
+
+            <div>
+                <span>📍</span>
+                <strong id="routeFrom">-</strong>
+            </div>
+
+            <div class="route-arrow">→</div>
+
+            <div>
+                <span>📍</span>
+                <strong id="routeTo">-</strong>
+            </div>
+
+        </div>
+
+        <div class="route-stats">
+
+            <div>
+                <small>Distance</small>
+                <strong id="routeDistance">-</strong>
+            </div>
+
+            <div>
+                <small>Estimated Time</small>
+                <strong id="routeTime">-</strong>
+            </div>
+
+            <div>
+                <small>Estimated Cost</small>
+                <strong id="routeCost">-</strong>
+            </div>
+
+        </div>
+
+        <p class="estimate-note">
+            * Travel cost and time are approximate estimates.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="map-footer">
+
+        <h3>TripGineer</h3>
+
+        <p>
+            Explore Chattogram. Discover more. Travel better.
+        </p>
+
+        <span>
+            © 2026 TripGineer | GraceGineers
+        </span>
+
+    </footer>
+
+
+    <!-- Leaflet JS -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <!-- Our Map JS -->
+
+    <script src="map.js"></script>
+
+</body>
+</html>

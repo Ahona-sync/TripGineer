@@ -1,0 +1,3408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripGineer - Explore Chittagong</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet Map CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <h2>Trip<span>Gineer</span></h2>
+        <p>Explore Chittagong</p>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav>
+
+        <a href="#">Search Destinations</a>
+
+        <a href="#aboutFull" onclick="showAbout(); return false;">
+    About Chattogram
+</a>
+
+        <a href="#">Explore by Category</a>
+
+        <a href="#">Explore by Upazila</a>
+
+
+        <!-- Grid Menu -->
+        <div class="grid-menu">
+
+            <button class="grid-btn">
+                ▦
+            </button>
+
+            <div class="grid-dropdown">
+
+                <a href="#">Our Recommendation</a>
+
+                <a href="#">Celebrate With Us</a>
+
+                <a href="#travelEssentials"
+   onclick="goToTravelEssentials(); return false;">
+    Travel Essentials
+</a>
+
+                <a href="map.html">Digital Map</a>
+
+                <a href="#">Popular Destinations</a>
+
+                <a href="#importantLinks">Important Links</a>
+
+                <a href="#">E-Brochure</a>
+
+                <a href="#holidayCalendar">Holiday Calendar</a>
+
+            </div>
+
+        </div>
+
+
+        <a href="#newsletter" class="newsletter-nav-btn">
+    Newsletter
+</a>
+
+    </nav>
+
+</header>
+ <section class="hero">
+
+        <video class="hero-video" autoplay muted loop playsinline>
+
+            <source src="videos/ctg.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+
+        <div class="overlay"></div>
+
+
+        
+        <div class="hero-content">
+    <p class="small-title">
+                DISCOVER THE BEAUTY OF
+            </p>
+
+            <h1>
+                Chittagong
+            </h1>
+
+            <p class="hero-text">
+                From scenic hills to peaceful beaches, Chittagong
+                has it all. Explore beautiful places, discover new
+                destinations and plan your perfect journey with
+                TripGineer.
+            </p>
+
+        </div>
+
+        
+
+    </section>
+
+    <!-- ================= ABOUT CHATTOGRAM ================= -->
+
+<!-- ================= ABOUT CHATTOGRAM PREVIEW ================= -->
+
+<section class="about-preview" id="about">
+
+    <p class="about-small-title">ABOUT CHATTOGRAM</p>
+
+    <p class="about-short-text">
+        Chattogram is one of the most historically significant and
+        naturally beautiful places in Bangladesh. From its rich
+        history and vibrant culture to beaches, hills, rivers and
+        forests, the city offers a unique experience for every traveler.
+    </p>
+
+    <button class="learn-more-btn" onclick="showAbout()">
+        View More
+    </button>
+
+</section>
+
+
+<!-- ================= FULL ABOUT CONTENT ================= -->
+
+<section class="about-full" id="aboutFull">
+
+    <div class="about-full-container">
+
+        <button class="close-about" onclick="hideAbout()">
+            ×
+        </button>
+
+        <p class="about-small-title">
+            ABOUT CHATTOGRAM
+        </p>
+
+        <h2>Chattogram: History, Nature & Culture</h2>
+
+        <div class="about-line"></div>
+
+        <p>
+            Chattogram is one of the most historically significant
+            and naturally beautiful places in Bangladesh. It is
+            situated near the Bay of Bengal. The city has been an
+            important center of trade, business, and naval activities
+            for centuries. Its long history has been shaped by many
+            kingdoms, traders, and rulers, which makes Chattogram a
+            site of great cultural and historical interest.
+        </p>
+
+        <p>
+            Chattogram is also famous for its natural beauty. The
+            region offers a unique combination of sea beaches, hills,
+            rivers, forests, and scenic landscapes. Some of the most
+            popular tourist attractions in Chattogram are Patenga
+            Beach, Parki Beach, Foy's Lake, Sitakunda and Chandranath
+            Hill. Many of these sites are visited by tourists
+            throughout the year.
+        </p>
+
+        <p>
+            Chattogram also serves as a gateway to
+            <strong>Bandarban, Rangamati, and Khagrachari.</strong>
+            From relaxing on beaches to exploring green hills,
+            waterfalls, lakes, forests and local communities,
+            Chattogram and its surrounding areas offer something
+            for every traveler.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= END ABOUT ================= -->
+
+<!-- ================= EXPLORE BY CATEGORY ================= -->
+
+<section class="explore-category-section">
+
+    <p class="explore-small-title">EXPLORE CHATTOGRAM</p>
+
+    <h2>Explore by Category</h2>
+
+    <div class="explore-red-line"></div>
+
+
+    <div class="category-carousel">
+
+        <!-- Beaches -->
+        <div class="explore-card active" onclick="goToCategory(0)">
+            <img src="images/beach.jpg" alt="Beaches">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>COASTAL</span>
+                <h3>Beaches</h3>
+            </div>
+        </div>
+
+
+        <!-- Waterfalls -->
+        <div class="explore-card" onclick="goToCategory(1)">
+            <img src="images/waterfall.jpg" alt="Waterfalls">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>SCENIC</span>
+                <h3>Waterfalls</h3>
+            </div>
+        </div>
+
+
+        <!-- Hills & Mountains -->
+        <div class="explore-card" onclick="goToCategory(2)">
+            <img src="images/hills.jpg" alt="Hills and Mountains">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>ADVENTURE</span>
+                <h3>Hills & Mountains</h3>
+            </div>
+        </div>
+
+
+        <!-- Islands -->
+        <div class="explore-card" onclick="goToCategory(3)">
+            <img src="images/island.jpg" alt="Islands">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>TROPICAL</span>
+                <h3>Islands</h3>
+            </div>
+        </div>
+
+
+        <!-- Heritage & History -->
+        <div class="explore-card" onclick="showHeritageDetails()">
+            <img src="images/heritage.jpg" alt="Heritage and History">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>HISTORIC</span>
+                <h3>Heritage & History</h3>
+            </div>
+        </div>
+
+
+        <!-- Parks & Nature -->
+        <div class="explore-card" onclick="goToCategory(5)">
+            <img src="images/nature.jpg" alt="Parks and Nature">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>NATURAL</span>
+                <h3>Parks & Nature</h3>
+            </div>
+        </div>
+
+
+        <!-- Religious Places -->
+        <div class="explore-card" onclick="goToCategory(6)">
+            <img src="images/religious.jpg" alt="Religious Places">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>CULTURAL</span>
+                <h3>Religious Places</h3>
+            </div>
+        </div>
+
+
+        <!-- Hotels & Resorts -->
+        <div class="explore-card" onclick="goToCategory(7)">
+            <img src="images/hotels.jpg" alt="Hotels and Resorts">
+
+            <div class="explore-card-overlay"></div>
+
+            <div class="explore-card-name">
+                <span>COMFORT</span>
+                <h3>Hotels & Resorts</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Carousel buttons -->
+
+    <div class="category-navigation">
+
+        <button class="category-arrow" onclick="previousCategory()">
+            ‹
+        </button>
+
+        <div class="category-indicators" id="categoryIndicators"></div>
+
+        <button class="category-arrow" onclick="nextCategory()">
+            ›
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= END EXPLORE BY CATEGORY ================= -->
+ <!-- ================= HERITAGE & HISTORY ================= -->
+
+<section class="heritage-slider-section" id="heritageDetails">
+
+    <div class="heritage-slider">
+
+        <!-- MAIN IMAGE -->
+        <div class="heritage-main">
+
+            <img id="heritageMainImage"
+                 src="images/anderkilla.jpg"
+                 alt="Anderkilla Shahi Jame Mosque">
+
+            <div class="heritage-dark-overlay"></div>
+
+            <!-- PLACE INFORMATION -->
+            <div class="heritage-place-info">
+
+                <h2 id="heritagePlaceName">
+                    Anderkilla Shahi Jame Mosque
+                </h2>
+
+                <div class="heritage-location">
+                    <span>📍</span>
+                    <span id="heritageLocation">
+                        Anderkilla, Chattogram
+                    </span>
+                </div>
+
+                <p id="heritageDescription">
+                    A historic Mughal-era mosque built in 1667,
+                    closely connected with the history of Chattogram.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- THUMBNAILS -->
+
+        <div class="heritage-thumbnails">
+
+            <div class="heritage-thumb active"
+                 onclick="changeHeritage(0)">
+
+                <img src="images/anderkilla.jpg"
+                     alt="Anderkilla Shahi Jame Mosque">
+
+            </div>
+
+
+            <div class="heritage-thumb"
+                 onclick="changeHeritage(1)">
+
+                <img src="images/war-cemetery.jpg"
+                     alt="Chattogram War Cemetery">
+
+            </div>
+
+
+            <div class="heritage-thumb"
+                 onclick="changeHeritage(2)">
+
+                <img src="images/ethnological-museum.jpg"
+                     alt="Ethnological Museum">
+
+            </div>
+
+
+            <div class="heritage-thumb"
+                 onclick="changeHeritage(3)">
+
+                <img src="images/mini-bangladesh.jpg"
+                     alt="Mini Bangladesh">
+
+            </div>
+
+
+            <div class="heritage-thumb"
+                 onclick="changeHeritage(4)">
+
+                <img src="images/chandanpura-mosque.jpg"
+                     alt="Chandanpura Mosque">
+
+            </div>
+
+        </div>
+
+
+        <!-- ARROWS -->
+
+        <div class="heritage-navigation">
+
+            <button onclick="previousHeritage()">‹</button>
+
+            <button onclick="nextHeritage()">›</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END HERITAGE & HISTORY ================= -->
+    <!-- ================= EXPLORE CATEGORIES ================= -->
+
+<!-- ================= CATEGORY SECTION ================= -->
+
+<section class="category-section">
+
+    <p class="category-small-title">POPULAR IN CHATTOGRAM</p>
+
+    <h2>Our Recommendations</h2>
+
+    <div class="red-line"></div>
+
+    <div class="category-collage">
+
+        <!-- Waterfall -->
+        <div class="category-card waterfall-card"
+             onclick="openWaterfallDetails()">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.ooGPCigZ5MX5ZlXdzJdDbgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Waterfalls">
+
+            <div class="card-overlay"></div>
+
+            <div class="card-title">
+                <span>SCENIC</span>
+                <h3>Waterfalls</h3>
+            </div>
+        </div>
+
+
+        <!-- Beaches -->
+<div class="recommendation-card rec-beach"
+     onclick="openBeachDetails()">
+
+    <img src="images/beaches.jpg"
+         alt="Beaches">
+
+    <div class="rec-overlay"></div>
+
+    <div class="rec-title">
+        <span>COASTAL</span>
+        <h3>Beaches</h3>
+    </div>
+
+</div>
+
+        <!-- Food -->
+        <div class="category-card food-card"
+     onclick="openFoodDetails()">
+            <img src="https://www.thespruceeats.com/thmb/XDBL9gA6A6nYWUdsRZ3QwH084rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-chicken-biryani-recipe-7367850-hero-A-ed211926bb0e4ca1be510695c15ce111.jpg"
+                 alt="Food">
+
+            <div class="card-overlay"></div>
+
+            <div class="card-title">
+                <span>AUTHENTIC</span>
+                <h3>Food & Cuisine</h3>
+            </div>
+        </div>
+
+
+        <!-- Cultural Events -->
+<div class="category-card events-card"
+     onclick="openEventDetails()">
+
+    <img src="images/cultural-events.jpg"
+         alt="Cultural Events">
+
+    <div class="card-overlay"></div>
+
+    <div class="card-title">
+        <span>TRADITIONAL</span>
+        <h3>Cultural Events</h3>
+    </div>
+
+</div>
+
+        <!-- Luxury -->
+<div class="category-card luxury-card"
+     onclick="openHotelDetails()">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.nUa-rqfPL7Wgz4JqHlPWGgHaFE?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                 alt="Luxury">
+
+            <div class="card-overlay"></div>
+
+            <div class="card-title">
+                <span>PREMIUM</span>
+                <h3>Luxury Escapes</h3>
+            </div>
+        </div>
+
+
+        <!-- Green Tourism -->
+        <div class="category-card green-card"
+             onclick="openGreenDetails()">
+            <img src="https://www.bangladeshtravelandtours.com/wp-content/uploads/2023/04/49-1024x768.jpg"
+                 alt="Green Tourism">
+
+            <div class="card-overlay"></div>
+
+            <div class="card-title">
+                <span>NATURAL</span>
+                <h3>Green Tourism</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END CATEGORY SECTION ================= -->
+ <!-- ================= HOTEL DETAILS ================= -->
+
+<section class="hotel-details-section" id="hotelDetails">
+
+    <div class="hotel-details-header">
+
+        <p>STAY IN CHATTOGRAM</p>
+
+        <h2>Popular Hotels in Chattogram</h2>
+
+        <div class="hotel-red-line"></div>
+
+        <p>
+            Explore popular hotels and resorts in Chattogram
+            for comfortable stays, business trips and leisure travel.
+        </p>
+
+    </div>
+
+
+    <div class="hotel-grid">
+
+
+        <!-- 1. Radisson Blu -->
+
+        <div class="hotel-detail-card">
+
+            <img src="images/radisson.jpg"
+                 alt="Radisson Blu Hotel Chattogram">
+
+            <div class="hotel-detail-content">
+
+                <h3>1. Radisson Blu Hotel, Chattogram Bay View</h3>
+
+                <p class="hotel-location">
+                    📍 Lalkhan Bazar
+                </p>
+
+                <p class="hotel-phone">
+                    📞 +880 9612-600800
+                </p>
+
+                <div class="hotel-rating">
+                    ⭐ 4.6/5
+                </div>
+
+                <h4>Why Popular</h4>
+
+                <p>
+                    One of Chattogram’s best-known luxury hotels,
+                    known for international-standard hospitality.
+                </p>
+
+                <h4>Services</h4>
+
+                <p>
+                    Luxury rooms & suites, swimming pool, spa,
+                    restaurants, fitness centre, banquet and
+                    conference facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2. The Peninsula -->
+
+        <div class="hotel-detail-card">
+
+            <img src="images/peninsula.jpg"
+                 alt="The Peninsula Chittagong">
+
+            <div class="hotel-detail-content">
+
+                <h3>2. The Peninsula Chittagong</h3>
+
+                <p class="hotel-location">
+                    📍 O.R. Nizam Road
+                </p>
+
+                <p class="hotel-phone">
+                    📞 +880 24-1361101-15
+                </p>
+
+                <div class="hotel-rating">
+                    ⭐ 4.4/5
+                </div>
+
+                <h4>Why Popular</h4>
+
+                <p>
+                    A long-established upscale hotel, popular with
+                    both business and leisure travellers.
+                </p>
+
+                <h4>Services</h4>
+
+                <p>
+                    Rooms & suites, rooftop pool, spa, restaurants,
+                    café, bar, fitness centre and conference
+                    facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3. Hotel Agrabad -->
+
+        <div class="hotel-detail-card">
+
+            <img src="images/hotel-agrabad.jpg"
+                 alt="Hotel Agrabad">
+
+            <div class="hotel-detail-content">
+
+                <h3>3. Hotel Agrabad</h3>
+
+                <p class="hotel-location">
+                    📍 Agrabad C/A
+                </p>
+
+                <p class="hotel-phone">
+                    📞 +880 9612-600500
+                </p>
+
+                <div class="hotel-rating">
+                    ⭐ 4.3/5
+                </div>
+
+                <h4>Why Popular</h4>
+
+                <p>
+                    One of Chattogram’s established hotels, located
+                    in the city’s major commercial district.
+                </p>
+
+                <h4>Services</h4>
+
+                <p>
+                    Rooms & suites, swimming pool, restaurants,
+                    spa, banquet and business facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4. Best Western -->
+
+        <div class="hotel-detail-card">
+
+            <img src="images/best-western.jpg"
+                 alt="Best Western SKS Chattogram">
+
+            <div class="hotel-detail-content">
+
+                <h3>4. Best Western SKS Chattogram</h3>
+
+                <p class="hotel-location">
+                    📍 Agrabad C/A
+                </p>
+
+                <p class="hotel-phone">
+                    📞 +880 1313-444478
+                </p>
+
+                <div class="hotel-rating">
+                    ⭐ 4.3/5
+                </div>
+
+                <h4>Why Popular</h4>
+
+                <p>
+                    A modern business-oriented hotel in Agrabad.
+                </p>
+
+                <h4>Services</h4>
+
+                <p>
+                    Modern rooms, infinity pool, gym, spa,
+                    restaurant, breakfast, Wi-Fi and conference
+                    facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5. Well Park Residence -->
+
+        <div class="hotel-detail-card">
+
+            <img src="images/well-park.jpg"
+                 alt="Well Park Residence">
+
+            <div class="hotel-detail-content">
+
+                <h3>5. Well Park Residence</h3>
+
+                <p class="hotel-location">
+                    📍 O.R. Nizam Road
+                </p>
+
+                <p class="hotel-phone">
+                    📞 +880 1841-735551
+                </p>
+
+                <div class="hotel-rating">
+                    ⭐ 4.2/5
+                </div>
+
+                <h4>Why Popular</h4>
+
+                <p>
+                    A well-known city hotel, particularly suitable
+                    for business and family stays.
+                </p>
+
+                <h4>Services</h4>
+
+                <p>
+                    Rooms & suites, restaurant, breakfast, spa,
+                    Wi-Fi, parking and event facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6. Foy's Lake Resort -->
+
+        <div class="hotel-detail-card">
+
+            <img src="images/foys-lake-resort.jpg"
+                 alt="Foy's Lake Resort">
+
+            <div class="hotel-detail-content">
+
+                <h3>6. Foy’s Lake Resort</h3>
+
+                <p class="hotel-location">
+                    📍 Foy’s Lake
+                </p>
+
+                <p class="hotel-phone">
+                    📞 +880 1973-676595
+                </p>
+
+                <div class="hotel-rating">
+                    ⭐ 4.2/5
+                </div>
+
+                <h4>Why Popular</h4>
+
+                <p>
+                    Known for its resort atmosphere and beautiful
+                    lakeside environment.
+                </p>
+
+                <h4>Services</h4>
+
+                <p>
+                    Resort accommodation, swimming pool, lakeside
+                    surroundings, dining and family leisure facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7. Jatra Flagship -->
+
+        <div class="hotel-detail-card">
+
+            <img src="images/jatra.jpg"
+                 alt="Jatra Flagship Chattogram City Centre">
+
+            <div class="hotel-detail-content">
+
+                <h3>7. Jatra Flagship Chattogram City Centre</h3>
+
+                <p class="hotel-location">
+                    📍 Chattogram City
+                </p>
+
+                <p class="hotel-phone">
+                    📞 +880 1912-519918
+                </p>
+
+                <div class="hotel-rating">
+                    ⭐ 4.4/5
+                </div>
+
+                <h4>Why Popular</h4>
+
+                <p>
+                    A modern serviced accommodation option,
+                    suitable for short and extended stays.
+                </p>
+
+                <h4>Services</h4>
+
+                <p>
+                    Serviced rooms, air conditioning, Wi-Fi,
+                    breakfast, housekeeping and parking.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- ================= END HOTEL DETAILS ================= -->
+ <!-- ================= FOOD DETAILS ================= -->
+
+<section class="food-details-section" id="foodDetails">
+
+    <div class="food-details-header">
+
+        <p>AUTHENTIC CHITTAGONG</p>
+
+        <h2>Chittagong Traditional Food</h2>
+
+        <div class="food-red-line"></div>
+
+        <p>
+            Discover traditional foods that represent the unique
+            taste and culinary heritage of Chittagong.
+        </p>
+
+    </div>
+
+
+    <div class="food-grid">
+
+
+        <!-- 1. Mezbani Meat -->
+
+        <div class="food-detail-card">
+
+            <img src="images/mezbani-meat.jpg"
+                 alt="Mezbani Meat">
+
+            <div class="food-detail-content">
+
+                <h3>1. Mezbani Meat</h3>
+
+                
+
+                <h4>Description</h4>
+
+                <p>
+                    A signature Chittagong beef dish. The meat is
+                    intensely spicy, aromatic and rich, and it is
+                    traditionally served with plain rice.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    Beef is cooked slowly with onions, dried and
+                    fresh chillies, spices, salt and oil. The meat
+                    is simmered until tender and the gravy becomes
+                    thick and deeply flavoured.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Mezbani meat is an essential part of Mezban,
+                    Chittagong's traditional communal feast. Mezban
+                    is held for weddings, religious occasions,
+                    memorials and other important social events.
+                    It represents Chittagong's culture of hospitality
+                    and communal eating.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2. Kala Bhuna -->
+
+        <div class="food-detail-card">
+
+            <img src="images/kala-bhuna.jpg"
+                 alt="Kala Bhuna">
+
+            <div class="food-detail-content">
+
+                <h3>2. Kala Bhuna</h3>
+
+                
+
+                <h4>Description</h4>
+
+                <p>
+                    A dark, rich and intensely spiced beef dish.
+                    The meat becomes almost blackish-brown after
+                    long cooking, which gives the dish its name.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    Beef is slowly cooked with onion, garlic,
+                    ginger, chilli, spices and oil. It is cooked
+                    for a long time until the moisture reduces
+                    and the spices coat the meat.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Kala Bhuna has a particularly strong association
+                    with Chittagong's food culture. It is commonly
+                    prepared for Eid, weddings, family gatherings
+                    and traditional feasts.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3. Shutki Bhuna -->
+
+        <div class="food-detail-card">
+
+            <img src="images/shutki-bhuna.jpg"
+                 alt="Shutki Bhuna">
+
+            <div class="food-detail-content">
+
+                <h3>3. Shutki Bhuna</h3>
+
+                
+
+                <h4>Description</h4>
+
+                <p>
+                    A strongly flavoured traditional dried-fish
+                    preparation. It is spicy, salty and aromatic,
+                    and is especially loved by people who enjoy
+                    the distinctive flavour of dried seafood.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    Dried fish is cleaned and sometimes soaked
+                    briefly, then cooked with onion, garlic, chilli,
+                    turmeric and other spices. It is fried or
+                    bhuna-style until the spices coat the fish.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Shutki is deeply connected with Chittagong's
+                    coastal fishing culture. Fish-drying developed
+                    as a traditional preservation method, while
+                    markets such as Asadganj became important
+                    centres of the dried-fish trade.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4. Nolar Kanji -->
+
+        <div class="food-detail-card">
+
+            <img src="images/nolar-kanji.jpg"
+                 alt="Nolar Kanji">
+
+            <div class="food-detail-content">
+
+                <h3>4. Nolar Kanji</h3>
+
+                
+                <h4>Description</h4>
+
+                <p>
+                    A thin, savoury broth made from beef bones.
+                    It has a light consistency but a rich flavour
+                    because of the bone marrow and meat.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    Beef bones, particularly bones containing
+                    marrow, are simmered for a long time with
+                    spices and salt until the broth becomes
+                    flavourful.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Nolar Kanji is strongly associated with Mezban
+                    and is traditionally served as part of the
+                    larger Mezban meal. It reflects the old practice
+                    of making full use of the animal in traditional
+                    cooking.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5. Mezban Dal -->
+
+        <div class="food-detail-card">
+
+            <img src="images/mezban-dal.jpg"
+                 alt="Mezban Dal">
+
+            <div class="food-detail-content">
+
+                <h3>5. Mezban Dal / Boot Dal</h3>
+
+                
+
+                <h4>Description</h4>
+
+                <p>
+                    A simple but flavourful lentil preparation
+                    traditionally served alongside the rich meat
+                    dishes of a Mezban feast.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    Lentils or chickpeas are cooked until soft and
+                    then seasoned with spices, onion, chilli and
+                    other ingredients. Traditional versions may
+                    have a richer flavour because of the cooking
+                    fat used in the feast.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Its importance comes from its role in the
+                    traditional Mezban meal. It provides a lighter
+                    accompaniment to the spicy beef and rice.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6. Durus Kura -->
+
+        <div class="food-detail-card">
+
+            <img src="images/durus-kura.jpg"
+                 alt="Durus Kura">
+
+            <div class="food-detail-content">
+
+                <h3>6. Durus Kura</h3>
+
+                
+
+                <h4>Description</h4>
+
+                <p>
+                    A traditional whole-chicken preparation with
+                    a rich, spicy flavour. It is particularly
+                    associated with celebrations and special
+                    occasions.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    A whole chicken is seasoned with spices and
+                    cooked until tender. It is then prepared with
+                    a rich spice mixture and cooked further until
+                    the flavours develop.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Durus Kura is associated with Chittagong's
+                    traditional wedding and celebration cuisine.
+                    It is especially interesting as part of the
+                    region's distinctive local food culture and
+                    broader historical culinary influences.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7. Modhubhaat -->
+
+        <div class="food-detail-card">
+
+            <img src="images/modhubhaat.jpg"
+                 alt="Modhubhaat">
+
+            <div class="food-detail-content">
+
+                <h3>7. Modhubhaat (মধুভাত)</h3>
+
+                
+                <h4>Description</h4>
+
+                <p>
+                    A traditional sweet rice preparation, known
+                    for its soft texture and sweet flavour. It is
+                    a simple, homestyle delicacy rather than a
+                    modern commercial dessert.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    Cooked rice is mixed with a sweetening ingredient
+                    such as molasses or sugar. Depending on the
+                    household recipe, additional ingredients may
+                    be used to give it more flavour.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Modhubhaat is remembered as part of the older
+                    regional food traditions of Chittagong. Its
+                    recipes can vary between families, reflecting
+                    the way traditional foods were passed down
+                    through generations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8. Traditional Pitha -->
+
+        <div class="food-detail-card">
+
+            <img src="images/chittagong-pitha.jpg"
+                 alt="Traditional Chittagong Pitha">
+
+            <div class="food-detail-content">
+
+                <h3>8. Traditional Chittagong Pitha</h3>
+
+                
+                <h4>Description</h4>
+
+                <p>
+                    Traditional pitha represents the homemade
+                    sweet and festive side of Chittagong's food
+                    culture. Different varieties can have
+                    different shapes, textures and fillings.
+                </p>
+
+                <h4>How It's Made</h4>
+
+                <p>
+                    Depending on the variety, rice flour or rice
+                    batter is combined with coconut, molasses,
+                    sugar or other ingredients. It may be steamed,
+                    boiled, fried or cooked on a griddle.
+                </p>
+
+                <h4>Traditional / History</h4>
+
+                <p>
+                    Pitha has a long-standing place in Bangladeshi
+                    rural and seasonal food culture, including
+                    Chittagong. It is particularly connected with
+                    winter, family gatherings and traditional
+                    celebrations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END FOOD DETAILS ================= -->
+ <!-- ================= CULTURAL EVENTS DETAILS ================= -->
+
+<section class="event-details-section" id="eventDetails">
+
+    <div class="event-details-header">
+
+        <p>CULTURE & TRADITION</p>
+
+        <h2>Cultural Events of Chattogram</h2>
+
+        <div class="event-red-line"></div>
+
+        <p>
+            Discover the traditional festivals, cultural celebrations
+            and community events that represent the rich cultural heritage
+            of Chattogram and the Chittagong Hill Tracts.
+        </p>
+
+    </div>
+
+
+    <div class="event-grid">
+
+        <!-- 1. Jabbarer Boli Khela -->
+
+        <div class="event-card">
+
+            <img src="images/jabbarer-boli-khela.jpg"
+                 alt="Jabbarer Boli Khela">
+
+            <div class="event-content">
+
+                <h3>Jabbarer Boli Khela</h3>
+
+                <p class="event-location">
+                    📍 Laldighi Maidan, Chattogram
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Jabbarer Boli Khela was introduced in 1909 by Abdul
+                    Jabbar Saudagar, a businessman and social worker from
+                    Chattogram. The event was intended to encourage
+                    physical strength and courage among young people
+                    during the British colonial period. It has continued
+                    as a traditional wrestling event for more than a century.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    Wrestlers, locally known as Boli, gather at Laldighi
+                    Maidan and compete in traditional wrestling. The
+                    competition is accompanied by a large traditional fair
+                    around the area, attracting visitors from different
+                    parts of Chattogram.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    It is one of the most famous folk traditions of
+                    Chattogram, bringing together traditional sport,
+                    local history and community participation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2. Jabbarer Boli Khela Boishakhi Mela -->
+
+        <div class="event-card">
+
+            <img src="images/boishakhi-mela.jpg"
+                 alt="Jabbarer Boli Khela Boishakhi Mela">
+
+            <div class="event-content">
+
+                <h3>Jabbarer Boli Khela Boishakhi Mela</h3>
+
+                <p class="event-location">
+                    📍 Laldighi area, Chattogram
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    The Boishakhi Mela developed around the historic
+                    Jabbarer Boli Khela and gradually became an important
+                    part of the annual celebration. The fair brings
+                    together local traders, artisans and visitors.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    Temporary stalls are set up around Laldighi and nearby
+                    streets. People can find clay products, bamboo and
+                    cane items, toys, jewellery, household products,
+                    plants, seasonal fruits and traditional food.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    The fair preserves the atmosphere of an old Bengali
+                    folk market and provides a platform for traditional
+                    crafts, local products and community interaction.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3. Chattogram Mezban -->
+
+        <div class="event-card">
+
+            <img src="images/mezban-event.jpg"
+                 alt="Chattogram Mezban">
+
+            <div class="event-content">
+
+                <h3>Chattogram Mezban</h3>
+
+                <p class="event-location">
+                    📍 Chattogram
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Mezban, locally known as Mejjan, is a long-established
+                    social feast tradition of Chattogram. It is deeply
+                    connected with Chattogram's culture of hospitality
+                    and generosity.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    A large number of people are invited to eat together.
+                    Traditional Mezban dishes commonly include white rice,
+                    spicy beef, dal, Nolar Kanji and Kala Bhuna. Mezban
+                    can be organised for weddings, religious occasions,
+                    memorial events and other important social gatherings.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    Mezban is more than a meal. It represents Chatgaiya
+                    hospitality, generosity, social bonding and community
+                    participation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4. Pohela Boishakh -->
+
+        <div class="event-card">
+
+            <img src="images/pohela-boishakh.jpg"
+                 alt="Pohela Boishakh">
+
+            <div class="event-content">
+
+                <h3>Pohela Boishakh / Nobo Borsho</h3>
+
+                <p class="event-location">
+                    📍 Chattogram
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Pohela Boishakh marks the beginning of the Bengali
+                    New Year. Although it is celebrated throughout
+                    Bangladesh, Chattogram has developed its own local
+                    cultural celebrations around the occasion.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    People participate in Mangal Shobhajatra, cultural
+                    programmes, folk music, dance, Rabindra Sangeet,
+                    fairs and traditional food events. People also wear
+                    traditional Bengali clothing and spend the day with
+                    family and friends.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    It celebrates Bengali language, culture, music,
+                    traditional dress, food and community identity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5. Chaitra Sankranti -->
+
+        <div class="event-card">
+
+            <img src="images/chaitra-sankranti.jpg"
+                 alt="Chaitra Sankranti">
+
+            <div class="event-content">
+
+                <h3>Chaitra Sankranti</h3>
+
+                <p class="event-location">
+                    📍 Chattogram
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐½
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Chaitra Sankranti is observed on the last day of the
+                    Bengali year. Traditionally, it represents the ending
+                    of the old year and preparation for the new one.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    Different cultural organisations arrange music, dance,
+                    folk performances, fairs and cultural programmes.
+                    In many places, Chaitra Sankranti celebrations continue
+                    into the preparations for Pohela Boishakh.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    It symbolises farewell to the old year, renewal and
+                    the beginning of a new cycle.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6. Biju -->
+
+        <div class="event-card">
+
+            <img src="images/biju.jpg"
+                 alt="Biju Festival">
+
+            <div class="event-content">
+
+                <h3>Biju</h3>
+
+                <p class="event-community">
+                    👥 Community: Chakma
+                </p>
+
+                <p class="event-location">
+                    📍 Chittagong Hill Tracts
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Biju is the traditional New Year festival of the
+                    Chakma people. It is closely connected with the
+                    seasonal cycle and traditional community life.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    The celebration traditionally extends over several
+                    days. People clean and decorate their homes, prepare
+                    traditional food, wear traditional clothes, visit
+                    relatives and friends, and participate in cultural
+                    activities.
+                </p>
+
+                <p>
+                    Different days have different customs, including
+                    flower-related rituals and family/community gatherings.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    Biju represents renewal, family, community, cultural
+                    identity and welcoming a new year.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7. Sangrai -->
+
+        <div class="event-card">
+
+            <img src="images/sangrai.jpg"
+                 alt="Sangrai Festival">
+
+            <div class="event-content">
+
+                <h3>Sangrai</h3>
+
+                <p class="event-community">
+                    👥 Community: Marma
+                </p>
+
+                <p class="event-location">
+                    📍 Chittagong Hill Tracts, especially Bandarban
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Sangrai is the traditional New Year celebration of
+                    the Marma community. It is one of the most well-known
+                    indigenous New Year celebrations in the Hill Tracts.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    One of its most famous traditions is Jal Keli, the
+                    water festival. People splash water on each other as
+                    part of welcoming the New Year. Traditional music,
+                    dance, games and community gatherings are also organised.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    The water celebration symbolises cleansing, leaving
+                    the past behind and welcoming a fresh beginning.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8. Bishu -->
+
+        <div class="event-card">
+
+            <img src="images/bishu.jpg"
+                 alt="Bishu Festival">
+
+            <div class="event-content">
+
+                <h3>Bishu</h3>
+
+                <p class="event-community">
+                    👥 Community: Tanchangya
+                </p>
+
+                <p class="event-location">
+                    📍 Chittagong Hill Tracts
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐½
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Bishu is the traditional New Year celebration of the
+                    Tanchangya community. Like the other indigenous New
+                    Year festivals of the Hill Tracts, it is associated
+                    with renewal and the beginning of a new year.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    People prepare traditional food, visit relatives,
+                    wear traditional clothes and take part in music,
+                    dance and cultural programmes. Community gatherings
+                    are an important part of the celebration.
+                </p>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    Bishu preserves the Tanchangya people's traditional
+                    customs, cultural identity and community heritage.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9. Boisabi -->
+
+        <div class="event-card">
+
+            <img src="images/boisabi.jpg"
+                 alt="Boisabi Festival">
+
+            <div class="event-content">
+
+                <h3>Boisabi</h3>
+
+                <p class="event-location">
+                    📍 Chittagong Hill Tracts
+                </p>
+
+                <p class="event-rating">
+                    ⭐⭐⭐⭐⭐
+                </p>
+
+                <h4>Cultural Heritage</h4>
+
+                <h5>History & Tradition</h5>
+
+                <p>
+                    Boisabi is not one single festival belonging to one
+                    community. It is a collective term commonly used for
+                    the traditional New Year celebrations of several
+                    indigenous communities of the Chittagong Hill Tracts.
+                </p>
+
+                <p>
+                    It is associated particularly with celebrations such
+                    as Biju, Sangrai and Baisu/Baisuk.
+                </p>
+
+                <h5>How It Is Celebrated</h5>
+
+                <p>
+                    Depending on the community, celebrations include:
+                </p>
+
+                <ul>
+                    <li>Traditional clothing</li>
+                    <li>Traditional food</li>
+                    <li>Music and dance</li>
+                    <li>Water celebrations</li>
+                    <li>Cultural performances</li>
+                    <li>Sports and traditional games</li>
+                    <li>Visiting relatives and friends</li>
+                    <li>Community gatherings</li>
+                    <li>Fairs and cultural programmes</li>
+                </ul>
+
+                <h5>Cultural Importance</h5>
+
+                <p>
+                    Boisabi represents the cultural diversity of the
+                    Chittagong Hill Tracts, while each community maintains
+                    its own distinct festival, language, customs and
+                    traditions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END CULTURAL EVENTS ================= -->
+ <!-- ================= BEACH DETAILS ================= -->
+
+<section class="beach-details-section" id="beachDetails">
+
+    <!-- Section Heading -->
+    <div class="beach-details-header">
+
+        <p>COASTAL BEAUTY OF CHATTOGRAM</p>
+
+        <h2>Beautiful Beaches</h2>
+
+        <div class="beach-red-line"></div>
+
+        <p>
+            Discover the beautiful beaches of Chattogram and enjoy
+            peaceful coastal scenery, sea waves and unforgettable sunsets.
+        </p>
+
+    </div>
+
+
+    <!-- Beach Cards -->
+    <div class="beach-grid">
+
+
+        <!-- ================= PATENGA ================= -->
+
+        <div class="beach-detail-card">
+
+            <img src="images/patenga.jpg"
+                 alt="Patenga Sea Beach">
+
+            <div class="beach-content">
+
+                <h3>Patenga Sea Beach</h3>
+
+                <p class="beach-location">
+                    📍 Patenga, Chattogram
+                </p>
+
+                <p class="beach-description">
+                    A popular sea beach located near Chattogram city
+                    and the mouth of the Karnaphuli River. It is well
+                    known for beautiful sunsets, sea waves and a lively
+                    coastal atmosphere.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= PARKI ================= -->
+
+        <div class="beach-detail-card">
+
+            <img src="images/parki.jpg"
+                 alt="Parki Sea Beach">
+
+            <div class="beach-content">
+
+                <h3>Parki Sea Beach</h3>
+
+                <p class="beach-location">
+                    📍 Anwara, Chattogram
+                </p>
+
+                <p class="beach-description">
+                    A wide and peaceful beach surrounded by natural
+                    coastal scenery. Parki is popular for its sandy
+                    shore, gentle waves and beautiful sunset views.
+                    It is a relaxing destination away from the busy city.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= GULIAKHALI ================= -->
+
+        <div class="beach-detail-card">
+
+            <img src="images/guliakhali.jpg"
+                 alt="Guliakhali Sea Beach">
+
+            <div class="beach-content">
+
+                <h3>Guliakhali Sea Beach</h3>
+
+                <p class="beach-location">
+                    📍 Sitakunda, Chattogram
+                </p>
+
+                <p class="beach-description">
+                    Guliakhali is known for its unique combination of
+                    green grasslands, muddy coastal landscapes and the
+                    sea. Its natural surroundings create a different
+                    beach experience for nature lovers and photographers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= BANSHBARIA ================= -->
+
+        <div class="beach-detail-card">
+
+            <img src="images/banshbaria.jpg"
+                 alt="Banshbaria Sea Beach">
+
+            <div class="beach-content">
+
+                <h3>Banshbaria Sea Beach</h3>
+
+                <p class="beach-location">
+                    📍 Banshbaria, Sitakunda, Chattogram
+                </p>
+
+                <p class="beach-description">
+                    A scenic coastal destination surrounded by greenery
+                    and a peaceful natural environment. The beach offers
+                    beautiful sea views and a relaxing atmosphere, making
+                    it suitable for a short day trip.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SANDWIP ================= -->
+
+        <div class="beach-detail-card">
+
+            <img src="images/sandwip.jpg"
+                 alt="Sandwip Beach">
+
+            <div class="beach-content">
+
+                <h3>Sandwip Beach</h3>
+
+                <p class="beach-location">
+                    📍 Sandwip, Chattogram
+                </p>
+
+                <p class="beach-description">
+                    A peaceful coastal destination situated on Sandwip
+                    Island. Visitors can enjoy the sea, natural scenery
+                    and the traditional rural lifestyle of the island.
+                    It offers a quieter experience away from mainland beaches.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- ================= END BEACH DETAILS ================= -->
+ <!-- ================= GREEN TOURISM DETAILS ================= -->
+
+<section class="green-details-section" id="greenDetails">
+
+    <div class="green-details-header">
+
+        <p>NATURAL BEAUTY OF CHATTOGRAM</p>
+
+        <h2>Green Tourism</h2>
+
+        <div class="green-red-line"></div>
+
+        <p>
+            Explore the peaceful green landscapes, forests, hills,
+            lakes and natural surroundings that make Chattogram
+            a beautiful destination for nature lovers.
+        </p>
+
+    </div>
+
+
+    <div class="green-grid">
+
+
+        <!-- 1. Sitakunda Eco Park -->
+
+        <div class="green-detail-card">
+
+            <img src="images/sitakunda-eco-park.jpg"
+                 alt="Sitakunda Eco Park">
+
+            <div class="green-content">
+
+                <h3>Sitakunda Eco Park</h3>
+
+                <p class="green-location">
+                    📍 Sitakunda, Chattogram
+                </p>
+
+                <p class="green-description">
+                    Sitakunda Eco Park is a beautiful natural destination
+                    surrounded by hills, forests and greenery. It offers
+                    visitors a peaceful environment for walking, sightseeing
+                    and enjoying the area's natural beauty.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2. Foy's Lake -->
+
+        <div class="green-detail-card">
+
+            <img src="images/foys-lake.jpg"
+                 alt="Foy's Lake">
+
+            <div class="green-content">
+
+                <h3>Foy's Lake</h3>
+
+                <p class="green-location">
+                    📍 Pahartali, Chattogram
+                </p>
+
+                <p class="green-description">
+                    Foy's Lake is a scenic man-made lake surrounded by
+                    green hills and natural landscapes. Its peaceful
+                    surroundings make it a popular place for relaxation,
+                    boating and family recreation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3. Chandranath Hill -->
+
+        <div class="green-detail-card">
+
+            <img src="images/chandranath-green.jpg"
+                 alt="Chandranath Hill">
+
+            <div class="green-content">
+
+                <h3>Chandranath Hill</h3>
+
+                <p class="green-location">
+                    📍 Sitakunda, Chattogram
+                </p>
+
+                <p class="green-description">
+                    Chandranath Hill is surrounded by green forests and
+                    scenic landscapes. The hiking trail offers beautiful
+                    natural views and makes the area a popular destination
+                    for nature lovers and adventure seekers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4. Dhopachhari -->
+
+        <div class="green-detail-card">
+
+            <img src="images/dhopachhari-green.jpg"
+                 alt="Dhopachhari">
+
+            <div class="green-content">
+
+                <h3>Dhopachhari</h3>
+
+                <p class="green-location">
+                    📍 Dhopachhari, Chattogram
+                </p>
+
+                <p class="green-description">
+                    Dhopachhari is known for its green hills, forests,
+                    streams and peaceful natural surroundings. It is a
+                    suitable destination for visitors who want to experience
+                    a quieter side of Chattogram.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5. Banshbaria -->
+
+        <div class="green-detail-card">
+
+            <img src="images/banshbaria-green.jpg"
+                 alt="Banshbaria">
+
+            <div class="green-content">
+
+                <h3>Banshbaria</h3>
+
+                <p class="green-location">
+                    📍 Sitakunda, Chattogram
+                </p>
+
+                <p class="green-description">
+                    Banshbaria combines coastal scenery with green
+                    surroundings and a peaceful atmosphere. The area is
+                    suitable for visitors who want to enjoy nature,
+                    fresh air and scenic views.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+
+
+    </div>
+
+</section>
+
+<!-- ================= END GREEN TOURISM DETAILS ================= -->
+ <!-- WATERFALL DETAILS SECTION -->
+<section class="waterfall-details-section" id="waterfallDetails">
+
+    <div class="waterfall-details-header">
+
+        <p>WATERFALLS OF CHATTOGRAM</p>
+
+        <h2>Waterfalls</h2>
+
+        <div class="waterfall-red-line"></div>
+
+        <p>
+            Discover the beautiful waterfalls of Chattogram,
+            surrounded by green hills, forests and scenic natural landscapes.
+        </p>
+
+    </div>
+
+
+    <div class="waterfall-grid">
+
+
+        <!-- 1. Khoiyachora -->
+
+        <div class="waterfall-detail-card">
+
+            <img src="images/khoiyachora.jpg"
+                 alt="Khoiyachora Waterfalls">
+
+            <div class="waterfall-content">
+
+                <h3>Khoiyachora Waterfalls</h3>
+
+                <p class="waterfall-location">
+                    📍 Mirsharai, Chattogram
+                </p>
+
+                <p class="waterfall-description">
+                    Khoiyachora is one of the most popular waterfalls
+                    in the hills of Mirsharai. It is known for its
+                    multiple cascades, green surroundings and
+                    adventurous trekking trail.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 2. Suptadhara -->
+
+        <div class="waterfall-detail-card">
+
+            <img src="images/suptadhara.jpg"
+                 alt="Suptadhara Waterfall">
+
+            <div class="waterfall-content">
+
+                <h3>Suptadhara Waterfall</h3>
+
+                <p class="waterfall-location">
+                    📍 Sitakunda, Chattogram
+                </p>
+
+                <p class="waterfall-description">
+                    Suptadhara Waterfall is located inside Sitakunda
+                    Eco Park and is surrounded by dense green forest.
+                    Its natural setting makes it a peaceful destination
+                    for nature lovers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 3. Napittachora -->
+
+        <div class="waterfall-detail-card">
+
+            <img src="images/napittachora.jpg"
+                 alt="Napittachora Waterfall">
+
+            <div class="waterfall-content">
+
+                <h3>Napittachora Waterfall</h3>
+
+                <p class="waterfall-location">
+                    📍 Mirsharai, Chattogram
+                </p>
+
+                <p class="waterfall-description">
+                    Napittachora is a scenic waterfall trail surrounded
+                    by hills, streams and forest. The trail includes
+                    several waterfalls and cascades, making it popular
+                    for hiking and adventure.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 4. Komoldoho -->
+
+        <div class="waterfall-detail-card">
+
+            <img src="images/komoldoho.jpg"
+                 alt="Komoldoho Waterfall">
+
+            <div class="waterfall-content">
+
+                <h3>Komoldoho Waterfall</h3>
+
+                <p class="waterfall-location">
+                    📍 Sitakunda, Chattogram
+                </p>
+
+                <p class="waterfall-description">
+                    Komoldoho is a beautiful waterfall trail surrounded
+                    by hills and greenery. The trail features several
+                    waterfalls and offers an exciting experience for
+                    hiking and nature exploration.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 5. Mithachora -->
+
+        <div class="waterfall-detail-card">
+
+            <img src="images/mithachora.jpg"
+                 alt="Mithachora Waterfall">
+
+            <div class="waterfall-content">
+
+                <h3>Mithachora Waterfall</h3>
+
+                <p class="waterfall-location">
+                    📍 Mirsharai, Chattogram
+                </p>
+
+                <p class="waterfall-description">
+                    Mithachora is a scenic waterfall surrounded by
+                    the green hills of Mirsharai. Its natural
+                    surroundings and flowing water make it an attractive
+                    destination for nature and adventure lovers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 6. Boyalia -->
+
+        <div class="waterfall-detail-card">
+
+            <img src="images/boyalia.jpg"
+                 alt="Boyalia Waterfall">
+
+            <div class="waterfall-content">
+
+                <h3>Boyalia Waterfall</h3>
+
+                <p class="waterfall-location">
+                    📍 Mirsharai, Chattogram
+                </p>
+
+                <p class="waterfall-description">
+                    Boyalia Waterfall is a beautiful natural attraction
+                    in the hilly area of Mirsharai. Green forests and
+                    rocky landscapes create a peaceful environment
+                    for exploring nature.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+<section class="travel-essentials-section" id="travelEssentials">
+
+    <div class="travel-essentials-header">
+        <p>BE ORGANIZED</p>
+        <h2>Travel Essentials</h2>
+        <div class="travel-red-line"></div>
+    </div>
+
+    <div class="travel-essential-slider">
+
+        <!-- BUS -->
+        <div class="travel-essential-item"
+             onclick="openTravelDetail('bus')">
+
+            <div class="travel-icon">
+                <i class="fa-solid fa-bus"></i>
+            </div>
+
+            <h3>Bus</h3>
+        </div>
+
+
+        <!-- AIRLINES -->
+        <div class="travel-essential-item"
+             onclick="openTravelDetail('airlines')">
+
+            <div class="travel-icon">
+                <i class="fa-solid fa-plane"></i>
+            </div>
+
+            <h3>Airlines</h3>
+        </div>
+
+
+        <!-- TRAIN -->
+        <div class="travel-essential-item"
+             onclick="openTravelDetail('train')">
+
+            <div class="travel-icon">
+                <i class="fa-solid fa-train"></i>
+            </div>
+
+            <h3>Train</h3>
+        </div>
+
+
+        <!-- TOUR GUIDE -->
+        <div class="travel-essential-item"
+             onclick="openTravelDetail('tour-guide')">
+
+            <div class="travel-icon">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+
+            <h3>Tour Guide</h3>
+        </div>
+
+
+        <!-- SHOPPING -->
+        <div class="travel-essential-item"
+             onclick="openTravelDetail('shopping')">
+
+            <div class="travel-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <h3>Shopping</h3>
+        </div>
+
+    </div>
+
+    <div class="travel-arrows">
+        <button onclick="previousTravelItem()">←</button>
+        <button onclick="nextTravelItem()">→</button>
+    </div>
+
+</section>
+<section class="travel-details-section" id="travelDetails">
+
+
+    <!-- ================= BUS ================= -->
+
+    <div class="travel-detail-content" id="busDetails">
+
+        <div class="travel-detail-header">
+
+            <p>TRAVEL BY ROAD</p>
+
+            <h2>Bus Services</h2>
+
+            <div class="travel-detail-line"></div>
+
+            <p>
+                Explore major bus services that connect Chattogram
+                with Dhaka, Cox's Bazar and other destinations.
+            </p>
+
+        </div>
+
+
+        <div class="travel-info-grid">
+
+            <div class="travel-info-card">
+
+                <h3>Green Line Paribahan</h3>
+
+                <p>
+                    Green Line provides intercity bus services on
+                    several major routes including Chattogram,
+                    Dhaka and Cox's Bazar.
+                </p>
+
+                <a href="https://greenlinebd.com/"
+                   target="_blank"
+                   class="travel-website-btn">
+                    Official Website ↗
+                </a>
+
+            </div>
+
+
+            <div class="travel-info-card">
+
+                <h3>Shyamoli Paribahan</h3>
+
+                <p>
+                    Shyamoli Paribahan provides domestic and
+                    international coach services across several
+                    major routes in Bangladesh.
+                </p>
+
+                <a href="https://shyamolitickets.com/"
+                   target="_blank"
+                   class="travel-website-btn">
+                    Official Website ↗
+                </a>
+
+            </div>
+
+
+            <div class="travel-info-card">
+
+                <h3>Hanif Enterprise</h3>
+
+                <p>
+                    A well-known intercity bus service connecting
+                    Chattogram with different cities of Bangladesh.
+                </p>
+
+            </div>
+
+
+            <div class="travel-info-card">
+
+                <h3>S. Alam Paribahan</h3>
+
+                <p>
+                    An intercity bus operator serving Chattogram
+                    and several other destinations in Bangladesh.
+                </p>
+
+            </div>
+
+
+            <div class="travel-info-card">
+
+                <h3>Shohagh Paribahan</h3>
+
+                <p>
+                    A long-distance coach service connecting
+                    major cities through intercity routes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= AIRLINES ================= -->
+
+    <div class="travel-detail-content" id="airlinesDetails">
+
+        <div class="travel-detail-header">
+
+            <p>TRAVEL BY AIR</p>
+
+            <h2>Airlines</h2>
+
+            <div class="travel-detail-line"></div>
+
+            <p>
+                Chattogram's Shah Amanat International Airport
+                provides access to domestic and international
+                air travel.
+            </p>
+
+        </div>
+
+
+        <div class="travel-info-grid">
+
+            <div class="travel-info-card">
+
+                <h3>Biman Bangladesh Airlines</h3>
+
+                <p>
+                    Bangladesh's national flag carrier offering
+                    domestic and international flights.
+                </p>
+
+                <a href="https://www.biman-airlines.com/"
+                   target="_blank"
+                   class="travel-website-btn">
+                    Official Website ↗
+                </a>
+
+            </div>
+
+
+            <div class="travel-info-card">
+
+                <h3>US-Bangla Airlines</h3>
+
+                <p>
+                    A Bangladeshi airline offering domestic and
+                    international flights.
+                </p>
+
+                <a href="https://www.usbair.com/"
+                   target="_blank"
+                   class="travel-website-btn">
+                    Official Website ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= TRAIN ================= -->
+
+    <div class="travel-detail-content" id="trainDetails">
+
+        <div class="travel-detail-header">
+
+            <p>TRAVEL BY RAIL</p>
+
+            <h2>Train Services</h2>
+
+            <div class="travel-detail-line"></div>
+
+            <p>
+                Bangladesh Railway provides rail connections
+                between Chattogram and different parts of Bangladesh.
+            </p>
+
+        </div>
+
+
+        <div class="travel-info-grid">
+
+            <div class="travel-info-card">
+
+                <h3>Bangladesh Railway</h3>
+
+                <p>
+                    The national railway system of Bangladesh,
+                    providing passenger train services across
+                    major routes including Chattogram.
+                </p>
+
+                <a href="https://railway.gov.bd/"
+                   target="_blank"
+                   class="travel-website-btn">
+                    Official Website ↗
+                </a>
+
+            </div>
+
+
+            <div class="travel-info-card">
+
+                <h3>Railway E-Ticket</h3>
+
+                <p>
+                    Use the official railway e-ticketing service
+                    to search train schedules and purchase
+                    tickets online.
+                </p>
+
+                <a href="https://eticket.railway.gov.bd/"
+                   target="_blank"
+                   class="travel-website-btn">
+                    Buy Train Ticket ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= TOUR GUIDE ================= -->
+
+    <div class="travel-detail-content" id="tour-guideDetails">
+
+        <div class="travel-detail-header">
+
+            <p>LOCAL TRAVEL SUPPORT</p>
+
+            <h2>Tour Guides & Groups</h2>
+
+            <div class="travel-detail-line"></div>
+
+            <p>
+                Connect with local tour groups and travel guides
+                for trip planning and guided travel experiences.
+            </p>
+
+        </div>
+
+
+        <div class="travel-guide-grid">
+
+
+            <div class="travel-guide-card">
+
+                <h3>Chittagong Tour Group - CTG</h3>
+
+                <p>
+                    <strong>Email:</strong>
+                    Chittagongtourgroup@gmail.com
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    +880 1868-510475
+                </p>
+
+                <a href="https://www.facebook.com/profile.php?id=61577873352814"
+                   target="_blank">
+                    Visit Facebook ↗
+                </a>
+
+            </div>
+
+
+
+            <div class="travel-guide-card">
+
+                <h3>Chittagong Tourist Gang</h3>
+
+                <p>
+                    <strong>Email:</strong>
+                    Not available
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    +880 1675-920711
+                </p>
+
+                <a href="https://www.facebook.com/profile.php?id=100066602165217"
+                   target="_blank">
+                    Visit Facebook ↗
+                </a>
+
+            </div>
+
+
+
+            <div class="travel-guide-card">
+
+                <h3>Foy's Lake Basecamp</h3>
+
+                <p>
+                    <strong>Email:</strong>
+                    foyslackbasecamp@gmail.com
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    +880 1777-701949
+                </p>
+
+                <a href="https://www.facebook.com/foyslakebasecamp"
+                   target="_blank">
+                    Visit Facebook ↗
+                </a>
+
+            </div>
+
+
+
+            <div class="travel-guide-card">
+
+                <h3>Shuvo Chan Travellers - SCT</h3>
+
+                <p>
+                    <strong>Email:</strong>
+                    shuvochantravellers686@gamail.com
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    +880 1349-539294
+                </p>
+
+                <a href="https://www.facebook.com/Shuvochantravellers"
+                   target="_blank">
+                    Visit Facebook ↗
+                </a>
+
+            </div>
+
+
+
+            <div class="travel-guide-card">
+
+                <h3>Bandarban Tour Guide</h3>
+
+                <p>
+                    <strong>Email:</strong>
+                    das.info010@gmail.com
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    +880 1537-666696
+                </p>
+
+                <a href="https://www.facebook.com/BANDARBAN30901"
+                   target="_blank">
+                    Visit Facebook ↗
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= SHOPPING ================= -->
+
+    <div class="travel-detail-content" id="shoppingDetails">
+
+        <div class="travel-detail-header">
+
+            <p>SHOPPING IN CHATTOGRAM</p>
+
+            <h2>Shopping Near Chattogram City</h2>
+
+            <div class="travel-detail-line"></div>
+
+            <p>
+                Discover popular shopping malls and traditional
+                markets around Chattogram city.
+            </p>
+
+        </div>
+
+
+        <div class="shopping-grid">
+
+
+            <!-- NEW MARKET -->
+
+            <div class="shopping-card">
+
+                <img src="images/new-market.jpg"
+                     alt="New Market Chattogram">
+
+                <div class="shopping-content">
+
+                    <h3>New Market</h3>
+
+                    <p>
+                        One of the popular shopping destinations
+                        in Chattogram, offering clothing,
+                        accessories, footwear and everyday items.
+                    </p>
+
+                    <span>
+                        📍 Jubilee Road, Chattogram
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SANMAR -->
+
+            <div class="shopping-card">
+
+                <img src="images/sanmar.jpg"
+                     alt="Sanmar Ocean City">
+
+                <div class="shopping-content">
+
+                    <h3>Sanmar Ocean City</h3>
+
+                    <p>
+                        A popular modern shopping mall with
+                        fashion, lifestyle stores, restaurants
+                        and other retail facilities.
+                    </p>
+
+                    <span>
+                        📍 Nasirabad, Chattogram
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AFMI -->
+
+            <div class="shopping-card">
+
+                <img src="images/afmi-plaza.jpg"
+                     alt="Afmi Plaza">
+
+                <div class="shopping-content">
+
+                    <h3>Afmi Plaza</h3>
+
+                    <p>
+                        A modern shopping destination where
+                        visitors can find fashion, footwear,
+                        lifestyle products and food options.
+                    </p>
+
+                    <span>
+                        📍 Bayazid Bostami Road, Chattogram
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TERI BAZAR -->
+
+            <div class="shopping-card">
+
+                <img src="images/teri-bazar.jpg"
+                     alt="Teri Bazar">
+
+                <div class="shopping-content">
+
+                    <h3>Teri Bazar</h3>
+
+                    <p>
+                        A historic and busy traditional shopping
+                        area, particularly known for clothing,
+                        fabrics and wholesale shopping.
+                    </p>
+
+                    <span>
+                        📍 Teri Bazar, Chattogram
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REAZUDDIN -->
+
+            <div class="shopping-card">
+
+                <img src="images/reazuddin.jpg"
+                     alt="Reazuddin Bazar">
+
+                <div class="shopping-content">
+
+                    <h3>Reazuddin Bazar</h3>
+
+                    <p>
+                        A busy traditional commercial area
+                        offering clothing, electronics,
+                        accessories and various everyday products.
+                    </p>
+
+                    <span>
+                        📍 Reazuddin Bazar, Chattogram
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</section>
+ <!-- ================= DIGITAL MAP PREVIEW ================= -->
+
+<section class="home-map-section" id="digitalMap">
+
+    <div class="home-map-header">
+
+        <p class="home-map-small-title">
+            DISCOVER CHATTOGRAM
+        </p>
+
+        <h2>Digital Travel Map</h2>
+
+        <div class="home-map-red-line"></div>
+
+        <p class="home-map-description">
+            Explore tourist destinations, hotels, restaurants,
+            hospitals and transport locations across Chattogram.
+        </p>
+
+    </div>
+
+
+    <div class="home-map-wrapper">
+
+        <!-- LEFT INFORMATION -->
+
+        <div class="home-map-info">
+
+            <span class="map-label">
+                EXPLORE WITH TRIPGINEER
+            </span>
+
+            <h3>
+                Find Your Next Destination
+            </h3>
+
+            <p>
+                Discover beautiful places around Chattogram
+                and explore important locations through our
+                interactive digital map.
+            </p>
+
+
+            <div class="home-map-features">
+
+                <div class="home-map-feature">
+                    <span>📍</span>
+                    <div>
+                        <strong>Tourist Places</strong>
+                        <small>Discover beautiful destinations</small>
+                    </div>
+                </div>
+
+                <div class="home-map-feature">
+                    <span>🏨</span>
+                    <div>
+                        <strong>Hotels & Restaurants</strong>
+                        <small>Find places to stay and eat</small>
+                    </div>
+                </div>
+
+                <div class="home-map-feature">
+                    <span>🛣️</span>
+                    <div>
+                        <strong>Route Planning</strong>
+                        <small>Plan your journey easily</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <a
+                href="map.html"
+                class="full-map-button">
+                Explore Full Digital Map ↗
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT MAP -->
+
+        <div class="home-map-box">
+
+            <div id="homeTravelMap"></div>
+
+            <div class="home-map-overlay">
+
+                <strong>📍 Chattogram</strong>
+
+                <span>
+                    Explore popular locations
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END DIGITAL MAP PREVIEW ================= -->
+ <!-- ================= IMPORTANT LINKS ================= -->
+
+<section class="important-links-section" id="importantLinks">
+
+    <div class="important-links-header">
+
+        <p class="important-small-title">
+            USEFUL INFORMATION
+        </p>
+
+        <h2>Important Links</h2>
+
+        <div class="important-red-line"></div>
+
+        <p class="important-description">
+            Quick access to essential government services,
+            emergency support and healthcare facilities in Chattogram.
+        </p>
+
+    </div>
+
+
+    <div class="important-links-container">
+
+
+        <!-- Bangladesh Police -->
+
+        <div class="important-link-card">
+
+            <div class="important-logo police-logo">
+                <span>👮</span>
+            </div>
+
+            <div class="important-card-content">
+
+                <h3>Bangladesh Police</h3>
+
+                <p>
+                    Official website of Bangladesh Police
+                    and access to important police services.
+                </p>
+
+                <a
+                    href="https://www.police.gov.bd/"
+                    target="_blank"
+                    class="important-visit-btn">
+
+                    Visit Website ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Fire Service -->
+
+        <div class="important-link-card">
+
+            <div class="important-logo fire-logo">
+                <span>🚒</span>
+            </div>
+
+            <div class="important-card-content">
+
+                <h3>Fire Service & Civil Defence</h3>
+
+                <p>
+                    Official Fire Service and Civil Defence
+                    information and emergency services.
+                </p>
+
+                <a
+                    href="https://fireservice.gov.bd/"
+                    target="_blank"
+                    class="important-visit-btn">
+
+                    Visit Website ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- myGov -->
+
+        <div class="important-link-card">
+
+            <div class="important-logo mygov-logo">
+
+                <span>my</span>Gov
+
+            </div>
+
+            <div class="important-card-content">
+
+                <h3>myGov Bangladesh</h3>
+
+                <p>
+                    Access government services and
+                    important citizen information online.
+                </p>
+
+                <a
+                    href="https://www.mygov.bd/"
+                    target="_blank"
+                    class="important-visit-btn">
+
+                    Visit Website ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Hospitals -->
+
+<div class="important-link-card hospital-card">
+
+    <div class="important-logo hospital-logo">
+        <span>🏥</span>
+    </div>
+
+    <div class="important-card-content">
+
+        <h3>Hospitals in Chattogram</h3>
+
+        <p>
+            Find useful information and official
+            websites of major hospitals in Chattogram.
+        </p>
+
+        <a
+            href="hospitals.html"
+            class="important-visit-btn">
+
+            View Hospitals ↗
+
+        </a>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ================= END IMPORTANT LINKS ================= -->
+ <!-- ================= HOLIDAY CALENDAR ================= -->
+
+<section class="holiday-calendar-section" id="holidayCalendar">
+
+    <div class="holiday-header">
+
+        <p class="holiday-small-title">
+            PLAN YOUR JOURNEY
+        </p>
+
+        <h2>Bangladesh Holiday Calendar</h2>
+
+        <div class="holiday-red-line"></div>
+
+        <p class="holiday-description">
+            Check public holidays and plan your trips around Bangladesh.
+        </p>
+
+    </div>
+
+
+    <!-- Calendar Controls -->
+
+    <div class="calendar-container">
+
+        <div class="calendar-toolbar">
+
+            <button class="today-button" onclick="goToToday()">
+                Today
+            </button>
+
+            <div class="calendar-navigation">
+
+                <button
+                    class="calendar-nav-button"
+                    onclick="previousMonth()">
+                    ‹
+                </button>
+
+                <button
+                    class="calendar-nav-button"
+                    onclick="nextMonth()">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="calendar-month-title">
+
+                <h3 id="calendarMonth">
+                    September 2026
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- Week Days -->
+
+        <div class="calendar-weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+
+        <!-- Calendar Days -->
+
+        <div
+            class="calendar-days"
+            id="calendarDays">
+        </div>
+
+    </div>
+
+
+    <!-- Holiday Information -->
+
+    <div
+        class="selected-holiday"
+        id="selectedHoliday">
+
+        <p>
+            Click a holiday to see details.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= END HOLIDAY CALENDAR ================= -->
+ <!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter-section" id="newsletter">
+
+    <div class="newsletter-content">
+
+        <p class="newsletter-small-title">
+            STAY CONNECTED
+        </p>
+
+        <h2>
+            Discover More with TripGineer
+        </h2>
+
+        <div class="newsletter-red-line"></div>
+
+        <p class="newsletter-text">
+            Subscribe to our newsletter and get travel updates,
+            new destinations, useful travel tips and special
+            activities from Chattogram.
+        </p>
+
+        <form
+            class="newsletter-form"
+            onsubmit="subscribeNewsletter(event)">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+        <p class="newsletter-note">
+            We will only use your email for TripGineer updates.
+        </p>
+
+        <p
+            class="newsletter-message"
+            id="newsletterMessage">
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="main-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <h2>
+                Trip<span>Gineer</span>
+            </h2>
+
+            <p>
+                Explore Chattogram, discover beautiful
+                destinations and plan your perfect journey.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="#about">About Chattogram</a>
+
+            <a href="#digitalMap">Digital Map</a>
+
+            <a href="#importantLinks">Important Links</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Explore</h3>
+
+            <a href="#newsletter">Newsletter</a>
+
+            <a href="map.html">Digital Map</a>
+
+            <a href="hospitals.html">Hospitals</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 TripGineer. All Rights Reserved.
+        </p>
+
+        <p>
+            Developed by GraceGineers
+        </p>
+
+    </div>
+
+</footer>
+ <!-- Leaflet JS -->
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+ <!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

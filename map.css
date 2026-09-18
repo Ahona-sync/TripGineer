@@ -1,0 +1,580 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.map-navbar {
+    height: 75px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    z-index: 1000;
+}
+
+.map-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #222;
+}
+
+.map-logo span {
+    color: #e31b23;
+}
+
+.map-logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.map-navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.map-navbar nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.map-navbar nav a:hover {
+    color: #e31b23;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.map-page-header {
+    text-align: center;
+    padding: 60px 20px 35px;
+    background: white;
+}
+
+.map-page-header p {
+    color: #e31b23;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.map-page-header h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.map-red-line {
+    width: 60px;
+    height: 4px;
+    background: #e31b23;
+    margin: 0 auto 15px;
+}
+
+.map-page-header span {
+    color: #777;
+    font-size: 15px;
+}
+
+
+/* ================= DIGITAL MAP ================= */
+
+.digital-map-section {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 35px auto;
+
+    display: grid;
+    grid-template-columns: 320px 1fr;
+
+    gap: 20px;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.map-sidebar {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+    height: fit-content;
+}
+
+.map-sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.sidebar-subtitle {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+
+/* ================= CONTROLS ================= */
+
+.map-control {
+    margin-bottom: 20px;
+}
+
+.map-control label,
+.route-box label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px 0 0 7px;
+
+    outline: none;
+}
+
+.search-box button {
+    width: 45px;
+
+    border: none;
+
+    background: #e31b23;
+
+    color: white;
+
+    border-radius: 0 7px 7px 0;
+
+    cursor: pointer;
+}
+
+.map-control select,
+.route-box select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    background: white;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* ================= ROUTE BOX ================= */
+
+.route-box {
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background: #fafafa;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+}
+
+.route-box h3 {
+    margin-bottom: 18px;
+
+    font-size: 17px;
+}
+
+.route-box select {
+    margin-bottom: 14px;
+}
+
+.route-button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #e31b23;
+
+    color: white;
+
+    font-weight: bold;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.route-button:hover {
+    background: #c9151c;
+}
+
+
+/* ================= RESET ================= */
+
+.reset-button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 11px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.reset-button:hover {
+    border-color: #e31b23;
+    color: #e31b23;
+}
+
+
+/* ================= LEGEND ================= */
+
+.map-legend {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eee;
+}
+
+.map-legend h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.map-legend div {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+
+    margin-bottom: 9px;
+}
+
+.legend-dot {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+.tourist-dot {
+    background: #e31b23;
+}
+
+.hotel-dot {
+    background: #1976d2;
+}
+
+.restaurant-dot {
+    background: #f57c00;
+}
+
+.hospital-dot {
+    background: #2e7d32;
+}
+
+.transport-dot {
+    background: #7b1fa2;
+}
+
+
+/* ================= MAP ================= */
+
+.map-container {
+    position: relative;
+
+    min-height: 650px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+#travelMap {
+    width: 100%;
+    height: 650px;
+}
+
+.map-info-box {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    z-index: 500;
+
+    background: white;
+
+    padding: 12px 16px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.map-info-box strong {
+    font-size: 14px;
+}
+
+.map-info-box span {
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* ================= ROUTE RESULT ================= */
+
+.route-result {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 45px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+    display: none;
+}
+
+.route-result.show {
+    display: block;
+}
+
+.route-result h2 {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.route-details {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.route-details div {
+    padding: 15px 20px;
+
+    background: #fafafa;
+
+    border-radius: 8px;
+}
+
+.route-arrow {
+    background: none !important;
+
+    font-size: 25px;
+
+    color: #e31b23;
+}
+
+.route-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.route-stats div {
+    text-align: center;
+
+    padding: 18px;
+
+    background: #f8f8f8;
+
+    border-radius: 8px;
+}
+
+.route-stats small {
+    display: block;
+
+    color: #777;
+
+    margin-bottom: 7px;
+}
+
+.route-stats strong {
+    font-size: 18px;
+}
+
+.estimate-note {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.map-footer {
+    background: #1e1e1e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    margin-top: 50px;
+}
+
+.map-footer h3 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.map-footer p {
+    color: #aaa;
+
+    margin-bottom: 20px;
+}
+
+.map-footer span {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .digital-map-section {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        min-height: 500px;
+    }
+
+    #travelMap {
+        height: 500px;
+    }
+
+    .map-navbar {
+        padding: 0 4%;
+    }
+
+    .map-navbar nav {
+        gap: 12px;
+    }
+
+    .map-navbar nav a {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .map-navbar {
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .map-page-header h1 {
+        font-size: 30px;
+    }
+
+    .digital-map-section {
+        width: 94%;
+    }
+
+    .route-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .route-details {
+        flex-direction: column;
+    }
+
+    .route-arrow {
+        transform: rotate(90deg);
+    }
+}

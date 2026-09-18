@@ -1,0 +1,5141 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 90px;
+
+    background-color: #f8f7f2;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 45px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    width: 300px;
+}
+
+.logo h2 {
+    font-size: 30px;
+
+    color: #123d4a;
+
+    letter-spacing: -1px;
+}
+
+.logo h2 span {
+    color: #16877c;
+}
+
+.logo p {
+    font-size: 13px;
+
+    margin-top: 2px;
+
+    color: #555;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-left: auto;
+}
+
+
+/* Navigation Links */
+
+nav > a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    padding: 8px 0;
+
+    transition: 0.3s;
+}
+
+nav > a:hover {
+    color: #16877c;
+}
+
+
+/* ================= GRID MENU ================= */
+
+.grid-menu {
+    position: relative;
+}
+
+
+/* Grid Button */
+
+.grid-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    color: #173f47;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    padding: 5px;
+
+    transition: 0.3s;
+}
+
+.grid-btn:hover {
+    color: #16877c;
+}
+
+
+/* ================= GRID DROPDOWN ================= */
+
+.grid-dropdown {
+    position: absolute;
+
+    top: 48px;
+
+    right: -10px;
+
+    width: 250px;
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+    padding: 10px 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: 0.3s;
+
+}
+
+
+/* Dropdown Links */
+
+.grid-dropdown a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 15px;
+
+    padding: 14px 20px;
+
+    transition: 0.3s;
+}
+
+.grid-dropdown a:hover {
+    background-color: #f2f7f5;
+
+    color: #16877c;
+
+    padding-left: 25px;
+}
+
+
+/* Show Dropdown when Hover */
+
+.grid-menu:hover .grid-dropdown {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* ================= SIGN UP ================= */
+
+.signup-btn {
+    text-decoration: none;
+
+    background-color: #147b78;
+
+    color: white !important;
+
+    padding: 13px 25px !important;
+
+    border-radius: 25px;
+
+    font-size: 14px !important;
+
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #0e5f5d;
+
+    color: white !important;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    height: 720px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Background Video */
+
+.hero-video {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100vw;
+    height: 56.25vw;
+
+    min-height: 100%;
+    min-width: 177.78vh;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: cover;
+
+    border: none;
+
+    z-index: 1;
+}
+
+
+/* Dark Overlay */
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 2;
+}
+
+
+/* ================= HERO TEXT ================= */
+
+.hero-content {
+    position: absolute;
+
+    top: 150px;
+    left: 7%;
+
+    color: white;
+
+    max-width: 650px;
+
+    z-index: 3;
+}
+
+
+/* Small Heading */
+
+.small-title {
+    font-size: 17px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Main Heading */
+
+.hero-content h1 {
+    font-size: 90px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+/* Hero Paragraph */
+
+.hero-text {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    max-width: 600px;
+}
+
+
+/* ================= INTRO BOX ================= */
+
+.intro-box {
+    position: absolute;
+
+    left: 7%;
+    bottom: 35px;
+
+    width: 620px;
+
+    background-color: #f5f1e7;
+
+    padding: 35px 40px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    z-index: 3;
+}
+
+
+/* Box Heading */
+
+.intro-box h2 {
+    font-size: 30px;
+
+    color: #174b52;
+
+    margin-bottom: 15px;
+}
+
+
+/* Box Paragraph */
+
+.intro-box p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #333;
+}
+
+
+/* ================= NEXT SECTION ================= */
+
+.welcome-section {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background-color: #faf9f5;
+}
+
+
+.section-small-title {
+    color: #16877c;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+.welcome-section h2 {
+    font-size: 40px;
+
+    color: #173f47;
+
+    margin-bottom: 15px;
+}
+
+
+.welcome-section > p:last-child {
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 70px;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo {
+        width: auto;
+
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        margin: 0;
+    }
+
+    .hero {
+        height: 700px;
+    }
+
+    .hero-content {
+        top: 100px;
+
+        left: 25px;
+        right: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .intro-box {
+        left: 25px;
+        right: 25px;
+
+        bottom: 25px;
+
+        width: auto;
+
+        padding: 25px;
+    }
+
+}
+/* =========================================
+   CATEGORY / OUR RECOMMENDATIONS SECTION
+   ========================================= */
+
+.category-section {
+    background-color: #faf9f6;
+    padding: 85px 40px 100px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* Small heading */
+
+.category-small-title {
+    color: #123d24;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+}
+
+
+/* Main heading */
+
+.category-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #123d24;
+    margin: 0;
+}
+
+
+/* Red line */
+
+.red-line {
+    width: 100px;
+    height: 3px;
+    background-color: #e83b3b;
+    margin: 20px auto 65px;
+}
+
+
+/* =========================================
+   IMAGE COLLAGE
+   ========================================= */
+
+.category-collage {
+    width: 1200px;
+    max-width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* =========================================
+   COMMON CARD
+   ========================================= */
+
+.category-card {
+    position: absolute;
+
+    width: 280px;
+    height: 390px;
+
+    background: white;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+
+    border: 7px solid white;
+}
+
+
+/* Image */
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Dark overlay */
+
+.card-overlay {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.05) 20%,
+            rgba(0,0,0,0.75) 100%
+        );
+}
+
+
+/* Text over image */
+
+.card-title {
+    position: absolute;
+
+    top: 28px;
+    left: 15px;
+    right: 15px;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+
+.card-title span {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.card-title h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+    line-height: 1.05;
+
+    margin-top: 10px;
+
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================
+   BACK ROW
+   ========================================= */
+
+
+/* Waterfall */
+
+.waterfall-card {
+    left: 25px;
+    top: 65px;
+
+    transform: rotate(-5deg);
+
+    z-index: 1;
+}
+
+
+/* Beach */
+
+.beach-card {
+    left: 235px;
+    top: 25px;
+
+    transform: rotate(-2deg);
+
+    z-index: 3;
+}
+
+
+/* Food */
+
+.food-card {
+    left: 460px;
+    top: 5px;
+
+    transform: rotate(2deg);
+
+    z-index: 4;
+}
+
+
+/* Heritage */
+
+.heritage-card {
+    right: 25px;
+    top: 65px;
+
+    transform: rotate(5deg);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   FRONT ROW
+   ========================================= */
+
+
+/* Luxury */
+
+.luxury-card {
+    left: 270px;
+    top: 220px;
+
+    transform: rotate(-3deg);
+
+    z-index: 6;
+}
+
+
+/* Green */
+
+.green-card {
+    right: 270px;
+    top: 220px;
+
+    transform: rotate(3deg);
+
+    z-index: 6;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+   ========================================= */
+
+.category-card:hover {
+    transform:
+        translateY(-18px)
+        scale(1.04)
+        rotate(0deg);
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,0.35);
+
+    z-index: 20 !important;
+}
+
+
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   CLICKED CARD
+   ========================================= */
+
+.category-card.active {
+    transform:
+        translateY(-20px)
+        scale(1.07)
+        rotate(0deg) !important;
+
+    z-index: 50 !important;
+
+    box-shadow:
+        0 30px 65px rgba(0,0,0,0.4);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .category-section {
+        padding: 70px 25px 80px;
+    }
+
+    .category-section h2 {
+        font-size: 40px;
+    }
+
+    .category-collage {
+        height: auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+
+        width: 100%;
+    }
+
+    .category-card {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        top: auto;
+
+        width: 100%;
+        height: 380px;
+
+        transform: none;
+    }
+
+    .category-card:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+
+    .category-card.active {
+        transform: translateY(-10px) scale(1.03) !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .category-section {
+        padding: 60px 18px;
+    }
+
+    .category-small-title {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .category-section h2 {
+        font-size: 32px;
+    }
+
+    .red-line {
+        margin-bottom: 45px;
+    }
+
+    .category-collage {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        height: 400px;
+    }
+
+}
+/* =========================================
+   ABOUT CHATTOGRAM
+   ========================================= */
+
+.about-preview {
+    background-color: #faf9f5;
+
+    text-align: center;
+
+    padding: 75px 25px 80px;
+}
+
+
+.about-small-title {
+    color: #16877c;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.about-short-text {
+    max-width: 900px;
+
+    margin: 0 auto 28px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* View More */
+
+.learn-more-btn {
+    border: none;
+
+    background-color: #147b78;
+
+    color: white;
+
+    padding: 13px 30px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.learn-more-btn:hover {
+    background-color: #0e5f5d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FULL DESCRIPTION
+   ========================================= */
+
+.about-full {
+    display: none;
+
+    background-color: #f5f1e7;
+
+    padding: 90px 25px;
+}
+
+
+.about-full-container {
+    max-width: 950px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 60px 70px;
+
+    position: relative;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+}
+
+
+.about-full h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #173f47;
+
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+
+.about-line {
+    width: 80px;
+
+    height: 3px;
+
+    background-color: #e83b3b;
+
+    margin-bottom: 30px;
+}
+
+
+.about-full p {
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    text-align: justify;
+
+    margin-bottom: 22px;
+}
+
+
+.about-full strong {
+    color: #173f47;
+}
+
+
+/* Close button */
+
+.close-about {
+    position: absolute;
+
+    top: 18px;
+
+    right: 22px;
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #147b78;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.close-about:hover {
+    background-color: #0e5f5d;
+
+    transform: rotate(90deg);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .about-full-container {
+        padding: 45px 25px;
+    }
+
+    .about-full h2 {
+        font-size: 32px;
+    }
+
+    .about-full p {
+        font-size: 15px;
+
+        text-align: left;
+    }
+
+}
+/* =====================================================
+   EXPLORE BY CATEGORY
+===================================================== */
+
+.explore-category-section {
+    padding: 90px 8% 80px;
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* Small heading */
+
+.explore-small-title {
+    margin: 0 0 12px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: #555;
+}
+
+
+/* Main heading */
+
+.explore-category-section h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+/* Red line */
+
+.explore-red-line {
+    width: 60px;
+    height: 3px;
+
+    background: #d62828;
+
+    margin: 18px auto 50px;
+}
+
+
+/* =====================================================
+   CAROUSEL AREA
+===================================================== */
+
+.category-carousel {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    height: 480px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    perspective: 1200px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.explore-card {
+
+    position: absolute;
+
+    width: 340px;
+    height: 420px;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translateX(0)
+        translateZ(-500px)
+        scale(0.6);
+
+    transition:
+        transform 0.8s ease,
+        opacity 0.7s ease;
+
+}
+
+
+/* Image */
+
+.explore-card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.explore-card-overlay {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 50%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.8)
+        );
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   CARD NAME
+===================================================== */
+
+.explore-card-name {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 30px;
+
+    z-index: 2;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 0 15px;
+}
+
+
+.explore-card-name span {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+}
+
+
+.explore-card-name h3 {
+
+    margin: 8px 0 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   FRONT CARD
+===================================================== */
+
+.explore-card.active {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    z-index: 10;
+
+    transform:
+        translateX(0)
+        translateZ(0)
+        scale(1);
+}
+
+
+/* =====================================================
+   LEFT CARD
+===================================================== */
+
+.explore-card.left {
+
+    opacity: 0.45;
+
+    pointer-events: auto;
+
+    z-index: 5;
+
+    transform:
+        translateX(-300px)
+        translateZ(-180px)
+        rotateY(18deg)
+        scale(0.78);
+}
+
+
+/* =====================================================
+   RIGHT CARD
+===================================================== */
+
+.explore-card.right {
+
+    opacity: 0.45;
+
+    pointer-events: auto;
+
+    z-index: 5;
+
+    transform:
+        translateX(300px)
+        translateZ(-180px)
+        rotateY(-18deg)
+        scale(0.78);
+}
+
+
+/* =====================================================
+   BACK CARDS
+===================================================== */
+
+.explore-card.back-left {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translateX(-500px)
+        translateZ(-500px)
+        scale(0.5);
+}
+
+
+.explore-card.back-right {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translateX(500px)
+        translateZ(-500px)
+        scale(0.5);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.category-navigation {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 20px;
+}
+
+
+/* Arrow */
+
+.category-arrow {
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #333;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    line-height: 40px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.category-arrow:hover {
+
+    background: #222;
+
+    color: white;
+}
+
+
+/* =====================================================
+   INDICATORS
+===================================================== */
+
+.category-indicators {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.category-indicator {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #bbb;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.category-indicator.active {
+
+    width: 25px;
+
+    border-radius: 10px;
+
+    background: #d62828;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .explore-category-section {
+
+        padding: 65px 20px 60px;
+    }
+
+
+    .explore-category-section h2 {
+
+        font-size: 32px;
+    }
+
+
+    .category-carousel {
+
+        height: 440px;
+    }
+
+
+    .explore-card {
+
+        width: 280px;
+        height: 380px;
+    }
+
+
+    .explore-card.left {
+
+        transform:
+            translateX(-120px)
+            translateZ(-150px)
+            rotateY(15deg)
+            scale(0.72);
+    }
+
+
+    .explore-card.right {
+
+        transform:
+            translateX(120px)
+            translateZ(-150px)
+            rotateY(-15deg)
+            scale(0.72);
+    }
+
+
+    .explore-card-name h3 {
+
+        font-size: 27px;
+    }
+
+}
+/* =====================================================
+   HOLIDAY CALENDAR
+===================================================== */
+
+.holiday-calendar-section {
+    padding: 90px 7% 100px;
+    background: #f8f9fa;
+}
+
+
+/* ================= HEADER ================= */
+
+.holiday-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.holiday-small-title {
+    margin: 0 0 12px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: #555;
+}
+
+.holiday-header h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    color: #222;
+}
+
+.holiday-red-line {
+    width: 60px;
+
+    height: 3px;
+
+    background: #d62828;
+
+    margin: 18px auto 15px;
+}
+
+.holiday-description {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #666;
+}
+
+
+/* ================= CALENDAR BOX ================= */
+
+.calendar-container {
+    max-width: 1250px;
+
+    margin: auto;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* ================= TOOLBAR ================= */
+
+.calendar-toolbar {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 75px;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid #ddd;
+
+    background: #f4f6f8;
+}
+
+
+/* TODAY BUTTON */
+
+.today-button {
+    padding: 10px 22px;
+
+    border: 1px solid #999;
+
+    background: white;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.today-button:hover {
+    background: #222;
+
+    color: white;
+}
+
+
+/* PREVIOUS / NEXT */
+
+.calendar-navigation {
+    display: flex;
+
+    gap: 5px;
+
+    margin-left: 30px;
+}
+
+.calendar-nav-button {
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    color: #444;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+.calendar-nav-button:hover {
+    background: #ddd;
+}
+
+
+/* MONTH TITLE */
+
+.calendar-month-title {
+    margin-left: 25px;
+}
+
+.calendar-month-title h3 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+/* ================= WEEK DAYS ================= */
+
+.calendar-weekdays {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    background: #f8f9fa;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar-weekdays div {
+    padding: 14px 5px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #555;
+
+    border-right: 1px solid #ddd;
+}
+
+
+/* ================= DAYS ================= */
+
+.calendar-days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+}
+
+.calendar-day {
+    min-height: 125px;
+
+    padding: 10px;
+
+    border-right: 1px solid #ddd;
+
+    border-bottom: 1px solid #ddd;
+
+    position: relative;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+.calendar-day:hover {
+    background: #fafafa;
+}
+
+
+/* OTHER MONTH DAYS */
+
+.calendar-day.other-month {
+    background: #f8f8f8;
+
+    color: #aaa;
+}
+
+
+/* DATE NUMBER */
+
+.day-number {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 28px;
+
+    height: 28px;
+
+    font-size: 13px;
+}
+
+
+/* TODAY */
+
+.calendar-day.today .day-number {
+    background: #1565c0;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-weight: 600;
+}
+
+
+/* HOLIDAY */
+
+.holiday-event {
+    display: block;
+
+    margin-top: 8px;
+
+    padding: 6px 7px;
+
+    background: #fff0f0;
+
+    border-left: 3px solid #d62828;
+
+    color: #b51d1d;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.holiday-event:hover {
+    background: #ffe0e0;
+}
+
+
+/* MULTIPLE HOLIDAY */
+
+.holiday-event + .holiday-event {
+    margin-top: 4px;
+}
+
+
+/* ================= HOLIDAY DETAILS ================= */
+
+.selected-holiday {
+    max-width: 1250px;
+
+    margin: 25px auto 0;
+
+    padding: 20px 25px;
+
+    background: white;
+
+    border-left: 4px solid #d62828;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.06);
+
+    min-height: 30px;
+}
+
+.selected-holiday p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+.selected-holiday h3 {
+    margin: 0 0 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    color: #222;
+}
+
+.selected-holiday span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .holiday-calendar-section {
+        padding: 60px 15px;
+    }
+
+    .holiday-header h2 {
+        font-size: 32px;
+    }
+
+    .calendar-toolbar {
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        padding: 15px;
+    }
+
+    .calendar-navigation {
+        margin-left: 5px;
+    }
+
+    .calendar-month-title {
+        margin-left: 5px;
+    }
+
+    .calendar-month-title h3 {
+        font-size: 20px;
+    }
+
+    .calendar-day {
+        min-height: 90px;
+
+        padding: 5px;
+    }
+
+    .calendar-weekdays div {
+        font-size: 11px;
+    }
+
+    .holiday-event {
+        font-size: 9px;
+
+        padding: 4px;
+    }
+
+}
+/* =====================================================
+   IMPORTANT LINKS
+===================================================== */
+
+.important-links-section {
+    padding: 90px 7% 100px;
+    background: #f8f9fa;
+}
+
+.important-links-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.important-small-title {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #555;
+}
+
+.important-links-header h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: #222;
+}
+
+.important-red-line {
+    width: 60px;
+    height: 3px;
+    background: #d62828;
+    margin: 18px auto 15px;
+}
+
+.important-description {
+    max-width: 650px;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* ================= MAIN CARDS ================= */
+
+.important-links-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+.important-link-card {
+    background: white;
+    border: 1px solid #e1e1e1;
+    padding: 30px 22px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.important-link-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= LOGOS ================= */
+
+.important-logo {
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 38px;
+
+    background: #f3f3f3;
+}
+
+
+.mygov-logo {
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #e3262e;
+
+    background: #fff0f0;
+}
+
+
+.mygov-logo span {
+    color: #008f4c;
+}
+
+
+/* ================= CARD TEXT ================= */
+
+.important-card-content h3 {
+
+    margin: 0 0 12px;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+.important-card-content p {
+
+    min-height: 70px;
+
+    margin: 0 0 20px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* ================= VISIT BUTTON ================= */
+
+.important-visit-btn {
+
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    border: 1px solid #333;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.important-visit-btn:hover {
+
+    background: #222;
+
+    color: white;
+}
+
+
+/* ================= HOSPITAL LIST ================= */
+
+.hospital-list {
+
+    max-width: 1200px;
+
+    margin: 60px auto 0;
+
+    padding-top: 50px;
+
+    border-top: 1px solid #ddd;
+
+    text-align: center;
+}
+
+
+.hospital-list h3 {
+
+    margin: 0 0 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+.hospital-list-subtitle {
+
+    margin: 0 0 30px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+
+/* ================= HOSPITAL GRID ================= */
+
+.hospital-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+
+.hospital-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    text-decoration: none;
+
+    color: #222;
+
+    transition: 0.3s;
+}
+
+
+.hospital-item:hover {
+
+    transform: translateX(5px);
+
+    border-color: #d62828;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.hospital-icon {
+
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff1f1;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+
+.hospital-item h4 {
+
+    margin: 0 0 6px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+.hospital-item span {
+
+    font-size: 12px;
+
+    color: #d62828;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .important-links-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .important-links-section {
+
+        padding: 60px 20px;
+    }
+
+
+    .important-links-header h2 {
+
+        font-size: 32px;
+    }
+
+
+    .important-links-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .hospital-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =====================================================
+   HOSPITAL PAGE
+===================================================== */
+
+.hospital-page-section {
+
+    min-height: 100vh;
+
+    padding: 100px 7%;
+
+    background: #f8f9fa;
+
+}
+
+
+.hospital-page-header {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+
+}
+
+
+.hospital-page-header h1 {
+
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    font-weight: 500;
+
+    color: #222;
+
+}
+
+
+.hospital-page-header > p:last-child {
+
+    max-width: 650px;
+
+    margin: 15px auto 0;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ================= HOSPITAL GRID ================= */
+
+.hospital-page-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* ================= HOSPITAL CARD ================= */
+
+.hospital-page-card {
+
+    background: white;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+
+}
+
+
+.hospital-page-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* ================= ICON ================= */
+
+.hospital-page-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff1f1;
+
+    border-radius: 50%;
+
+    font-size: 38px;
+
+}
+
+
+/* ================= CARD TEXT ================= */
+
+.hospital-page-card h2 {
+
+    margin: 0 0 15px;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    color: #222;
+
+}
+
+
+.hospital-page-card p {
+
+    min-height: 55px;
+
+    margin: 0 auto 25px;
+
+    max-width: 430px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+}
+
+
+/* ================= WEBSITE BUTTON ================= */
+
+.hospital-website-btn {
+
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    border: 1px solid #333;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+.hospital-website-btn:hover {
+
+    background: #222;
+
+    color: white;
+
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.hospital-back {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+}
+
+
+.hospital-back a {
+
+    display: inline-block;
+
+    padding: 11px 25px;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+.hospital-back a:hover {
+
+    background: #d62828;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+.hospital-footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #222;
+
+    color: #ddd;
+
+    font-size: 13px;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .hospital-page-section {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .hospital-page-header h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .hospital-page-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hospital-page-card h2 {
+
+        font-size: 21px;
+
+    }
+
+}
+/* =====================================================
+   HOME PAGE DIGITAL MAP
+===================================================== */
+
+.home-map-section {
+    padding: 90px 6%;
+    background: #f7f7f7;
+}
+
+
+/* ================= HEADER ================= */
+
+.home-map-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.home-map-small-title {
+    color: #e31b23;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.home-map-header h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.home-map-red-line {
+    width: 55px;
+    height: 4px;
+    background: #e31b23;
+    margin: 0 auto 18px;
+}
+
+.home-map-description {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ================= MAP WRAPPER ================= */
+
+.home-map-wrapper {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ================= LEFT INFO ================= */
+
+.home-map-info {
+    padding: 45px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map-label {
+    color: #e31b23;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.home-map-info h3 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+    color: #222;
+}
+
+.home-map-info > p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= FEATURES ================= */
+
+.home-map-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-bottom: 30px;
+}
+
+.home-map-feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.home-map-feature > span {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    border-radius: 50%;
+
+    font-size: 19px;
+}
+
+.home-map-feature strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.home-map-feature small {
+    display: block;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.full-map-button {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 13px 22px;
+
+    background: #e31b23;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.full-map-button:hover {
+    background: #c9151c;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= MAP BOX ================= */
+
+.home-map-box {
+    position: relative;
+
+    min-height: 500px;
+}
+
+#homeTravelMap {
+    width: 100%;
+
+    height: 500px;
+}
+
+
+/* ================= MAP OVERLAY ================= */
+
+.home-map-overlay {
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    z-index: 500;
+
+    background: white;
+
+    padding: 11px 15px;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.home-map-overlay strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.home-map-overlay span {
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .home-map-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .home-map-info {
+        padding: 35px 30px;
+    }
+
+    .home-map-box {
+        min-height: 450px;
+    }
+
+    #homeTravelMap {
+        height: 450px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .home-map-section {
+        padding: 60px 5%;
+    }
+
+    .home-map-header h2 {
+        font-size: 30px;
+    }
+
+    .home-map-info h3 {
+        font-size: 25px;
+    }
+
+    .home-map-info {
+        padding: 30px 22px;
+    }
+
+    #homeTravelMap {
+        height: 400px;
+    }
+
+}
+/* =====================================================
+   MAIN FOOTER
+===================================================== */
+
+.main-footer {
+    background: #151515;
+
+    color: white;
+
+    padding: 55px 6% 0;
+}
+
+
+.footer-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 45px;
+}
+
+
+/* ================= BRAND ================= */
+
+.footer-brand h2 {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.footer-brand h2 span {
+    color: #e31b23;
+}
+
+.footer-brand p {
+    max-width: 350px;
+
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= FOOTER LINKS ================= */
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links h3 {
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #999;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e31b23;
+}
+
+
+/* ================= BOTTOM ================= */
+
+.footer-bottom {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #333;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* ================= NEWSLETTER LINE ================= */
+
+.newsletter-red-line {
+    width: 50px;
+
+    height: 3px;
+
+    background: #e31b23;
+
+    margin: 0 auto 18px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+/* =====================================================
+   FOOD DETAILS
+===================================================== */
+
+.food-details-section {
+    display: none;
+    padding: 80px 6%;
+    background: #f8f8f8;
+}
+
+.food-details-section.show-food {
+    display: block;
+}
+
+.food-details-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.food-details-header p:first-child {
+    color: #e31b23;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.food-details-header h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.food-details-header > p:last-child {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.food-red-line {
+    width: 50px;
+    height: 3px;
+    background: #e31b23;
+    margin: 0 auto 18px;
+}
+
+
+/* FOOD GRID */
+
+.food-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* FOOD CARD */
+
+.food-detail-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.food-detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-detail-card img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.food-detail-content {
+    padding: 25px;
+}
+
+.food-detail-content h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.food-rating {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.food-detail-content h4 {
+    color: #e31b23;
+    font-size: 14px;
+
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
+
+.food-detail-content p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .food-details-section {
+        padding: 60px 5%;
+    }
+
+    .food-details-header h2 {
+        font-size: 28px;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-detail-card img {
+        height: 230px;
+    }
+
+}
+/* =====================================================
+   HOTEL DETAILS
+===================================================== */
+
+.hotel-details-section {
+    display: none;
+    padding: 80px 6%;
+    background: #f8f8f8;
+}
+
+.hotel-details-section.show-hotels {
+    display: block;
+}
+
+.hotel-details-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.hotel-details-header > p:first-child {
+    color: #e31b23;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hotel-details-header h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.hotel-red-line {
+    width: 50px;
+    height: 3px;
+    background: #e31b23;
+    margin: 0 auto 18px;
+}
+
+.hotel-details-header > p:last-child {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* HOTEL GRID */
+
+.hotel-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* HOTEL CARD */
+
+.hotel-detail-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.hotel-detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.hotel-detail-card img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+    display: block;
+}
+
+.hotel-detail-content {
+    padding: 25px;
+}
+
+.hotel-detail-content h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.hotel-location,
+.hotel-phone {
+    color: #666;
+    font-size: 13px;
+    margin: 6px 0;
+}
+
+.hotel-rating {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.hotel-detail-content h4 {
+    color: #e31b23;
+    font-size: 14px;
+
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
+
+.hotel-detail-content p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hotel-details-section {
+        padding: 60px 5%;
+    }
+
+    .hotel-details-header h2 {
+        font-size: 28px;
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-detail-card img {
+        height: 230px;
+    }
+
+}
+/* ================= CULTURAL EVENTS ================= */
+
+.event-details-section {
+    display: none;
+    padding: 80px 8%;
+    background: #f8f8f8;
+}
+
+.event-details-section.show-events {
+    display: block;
+}
+
+.event-details-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+
+.event-details-header > p:first-child {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.event-details-header h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.event-red-line {
+    width: 60px;
+    height: 3px;
+    background: #c62828;
+    margin: 0 auto 20px;
+}
+
+.event-details-header p:last-child {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* Event Grid */
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* Event Card */
+
+.event-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.event-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.event-content {
+    padding: 24px;
+}
+
+.event-content h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.event-location,
+.event-community {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.event-rating {
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+.event-content h4 {
+    font-size: 15px;
+    margin: 15px 0 8px;
+    color: #b22222;
+}
+
+.event-content h5 {
+    font-size: 15px;
+    margin: 15px 0 6px;
+}
+
+.event-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.event-content ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.event-content li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .event-details-section {
+        padding: 60px 5%;
+    }
+
+    .event-details-header h2 {
+        font-size: 30px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Fix for Cultural Events recommendation card */
+
+/* Cultural Events title */
+
+.events-card .card-title {
+    bottom: 45px;
+}
+
+.events-card .card-title h3 {
+    font-size: 34px;
+    line-height: 1.05;
+    max-width: 250px;
+}
+/* =====================================================
+   BEACH DETAILS SECTION
+   ===================================================== */
+
+.beach-details-section {
+    display: none;
+
+    padding: 85px 6% 100px;
+
+    background: #f8faf8;
+}
+
+
+/* Show section after clicking Beaches */
+
+.beach-details-section.show-beaches {
+    display: block;
+}
+
+
+/* =====================================================
+   BEACH SECTION HEADER
+   ===================================================== */
+
+.beach-details-header {
+    text-align: center;
+
+    max-width: 780px;
+
+    margin: 0 auto 50px;
+}
+
+
+.beach-details-header p:first-child {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: #c62828;
+
+    margin-bottom: 12px;
+}
+
+
+.beach-details-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 46px;
+
+    color: #0d4b2e;
+
+    margin: 0 0 18px;
+}
+
+
+.beach-red-line {
+    width: 65px;
+
+    height: 3px;
+
+    background: #e53935;
+
+    margin: 0 auto 20px;
+}
+
+
+.beach-details-header p:last-child {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   BEACH GRID
+   ===================================================== */
+
+.beach-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   BEACH CARD
+   ===================================================== */
+
+.beach-detail-card {
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.beach-detail-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =====================================================
+   BEACH IMAGE
+   ===================================================== */
+
+.beach-detail-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   BEACH CONTENT
+   ===================================================== */
+
+.beach-content {
+    padding: 24px;
+}
+
+
+.beach-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    color: #174d35;
+
+    margin: 0 0 10px;
+}
+
+
+.beach-location {
+    font-size: 14px;
+
+    color: #777;
+
+    margin: 0 0 14px;
+}
+
+
+.beach-description {
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color: #555;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .beach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .beach-details-section {
+        padding: 60px 5% 80px;
+    }
+
+
+    .beach-details-header h2 {
+        font-size: 35px;
+    }
+
+
+    .beach-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .beach-detail-card img {
+        height: 220px;
+    }
+
+}
+/* =====================================================
+   OUR RECOMMENDATIONS - CARD ARRANGEMENT
+   ===================================================== */
+
+.category-collage {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 650px;
+    margin: 40px auto 0;
+}
+
+
+/* =====================================================
+   COMMON CARD STYLE
+   ===================================================== */
+
+.category-collage .category-card {
+    position: absolute !important;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 7px solid #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Make image fill the card */
+
+.category-collage .category-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   1. WATERFALL
+   ===================================================== */
+
+.category-collage .waterfall-card {
+
+    width: 340px !important;
+    height: 300px !important;
+
+    left: 80px !important;
+    top: 20px !important;
+
+    transform: rotate(-3deg) !important;
+
+    z-index: 3 !important;
+}
+
+
+/* =====================================================
+   2. FOOD
+   ===================================================== */
+
+.category-collage .food-card {
+
+    width: 340px !important;
+    height: 300px !important;
+
+    right: 80px !important;
+    top: 20px !important;
+
+    transform: rotate(2deg) !important;
+
+    z-index: 3 !important;
+}
+
+
+/* =====================================================
+   3. BEACH
+   ===================================================== */
+
+.category-collage .beach-card {
+
+    width: 330px !important;
+    height: 270px !important;
+
+    left: 20px !important;
+    top: 330px !important;
+
+    transform: rotate(1deg) !important;
+
+    z-index: 5 !important;
+}
+
+
+/* =====================================================
+   4. CULTURAL EVENTS
+   ===================================================== */
+
+.category-collage .events-card {
+
+    width: 390px !important;
+    height: 280px !important;
+
+    left: 50% !important;
+    top: 205px !important;
+
+    transform:
+        translateX(-50%)
+        rotate(-1deg) !important;
+
+    z-index: 10 !important;
+}
+
+
+/* =====================================================
+   5. LUXURY
+   ===================================================== */
+
+.category-collage .luxury-card {
+
+    width: 330px !important;
+    height: 270px !important;
+
+    right: 20px !important;
+    top: 330px !important;
+
+    transform: rotate(-1deg) !important;
+
+    z-index: 5 !important;
+}
+
+
+/* =====================================================
+   6. GREEN TOURISM
+   ===================================================== */
+
+.category-collage .green-card {
+
+    width: 360px !important;
+    height: 210px !important;
+
+    left: 50% !important;
+    top: 495px !important;
+
+    transform:
+        translateX(-50%)
+        rotate(1deg) !important;
+
+    z-index: 7 !important;
+}
+
+
+/* =====================================================
+   HOVER EFFECT
+   ===================================================== */
+
+.category-collage .waterfall-card:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04) !important;
+
+    z-index: 30 !important;
+}
+
+
+.category-collage .food-card:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04) !important;
+
+    z-index: 30 !important;
+}
+
+
+.category-collage .beach-card:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04) !important;
+
+    z-index: 30 !important;
+}
+
+
+.category-collage .events-card:hover {
+
+    transform:
+        translateX(-50%)
+        rotate(0deg)
+        scale(1.04) !important;
+
+    z-index: 30 !important;
+}
+
+
+.category-collage .luxury-card:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04) !important;
+
+    z-index: 30 !important;
+}
+
+
+.category-collage .green-card:hover {
+
+    transform:
+        translateX(-50%)
+        rotate(0deg)
+        scale(1.04) !important;
+
+    z-index: 30 !important;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .category-collage {
+        height: 900px;
+    }
+
+    .category-collage .waterfall-card {
+        left: 30px !important;
+    }
+
+    .category-collage .food-card {
+        right: 30px !important;
+    }
+
+    .category-collage .beach-card {
+        left: 20px !important;
+        top: 350px !important;
+    }
+
+    .category-collage .luxury-card {
+        right: 20px !important;
+        top: 350px !important;
+    }
+
+    .category-collage .events-card {
+        top: 210px !important;
+    }
+
+    .category-collage .green-card {
+        top: 620px !important;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .category-collage {
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        padding: 20px 10px 50px;
+    }
+
+
+    .category-collage .category-card {
+
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+
+        transform: none !important;
+
+        width: 90% !important;
+
+        height: 260px !important;
+    }
+
+
+    .category-collage .category-card:hover {
+
+        transform: scale(1.02) !important;
+    }
+
+}
+/* =====================================================
+   GREEN TOURISM DETAILS
+   ===================================================== */
+
+.green-details-section {
+    display: none;
+
+    padding: 85px 6% 100px;
+
+    background: #f8faf8;
+}
+
+
+/* Show section */
+
+.green-details-section.show-green {
+    display: block;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.green-details-header {
+    text-align: center;
+
+    max-width: 780px;
+
+    margin: 0 auto 50px;
+}
+
+
+.green-details-header p:first-child {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: #c62828;
+
+    margin-bottom: 12px;
+}
+
+
+.green-details-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 46px;
+
+    color: #0d4b2e;
+
+    margin: 0 0 18px;
+}
+
+
+.green-red-line {
+    width: 65px;
+
+    height: 3px;
+
+    background: #e53935;
+
+    margin: 0 auto 20px;
+}
+
+
+.green-details-header p:last-child {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   GREEN GRID
+   ===================================================== */
+
+.green-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   GREEN CARD
+   ===================================================== */
+
+.green-detail-card {
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.green-detail-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =====================================================
+   IMAGE
+   ===================================================== */
+
+.green-detail-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.green-content {
+    padding: 24px;
+}
+
+
+.green-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    color: #174d35;
+
+    margin: 0 0 10px;
+}
+
+
+.green-location {
+    font-size: 14px;
+
+    color: #777;
+
+    margin: 0 0 14px;
+}
+
+
+.green-description {
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color: #555;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .green-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .green-details-section {
+        padding: 60px 5% 80px;
+    }
+
+
+    .green-details-header h2 {
+        font-size: 35px;
+    }
+
+
+    .green-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .green-detail-card img {
+        height: 220px;
+    }
+
+}
+/* =====================================================
+   WATERFALL DETAILS SECTION
+   ===================================================== */
+
+.waterfall-details-section {
+    display: none;
+    padding: 85px 6% 100px;
+    background: #f8faf8;
+}
+
+.waterfall-details-section.show-waterfalls {
+    display: block;
+}
+
+
+/* Header */
+
+.waterfall-details-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 50px;
+}
+
+.waterfall-details-header p:first-child {
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #c62828;
+    margin-bottom: 12px;
+}
+
+.waterfall-details-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 46px;
+    color: #0d4b2e;
+    margin: 0 0 18px;
+}
+
+.waterfall-red-line {
+    width: 65px;
+    height: 3px;
+    background: #e53935;
+    margin: 0 auto 20px;
+}
+
+.waterfall-details-header p:last-child {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Cards */
+
+.waterfall-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.waterfall-detail-card {
+    background: #fff;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.waterfall-detail-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.16);
+}
+
+
+/* Image */
+
+.waterfall-detail-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Content */
+
+.waterfall-content {
+    padding: 24px;
+}
+
+.waterfall-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    color: #174d35;
+
+    margin: 0 0 10px;
+}
+
+.waterfall-location {
+    font-size: 14px;
+
+    color: #777;
+
+    margin: 0 0 14px;
+}
+
+.waterfall-description {
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color: #555;
+
+    margin: 0;
+}
+
+
+/* Tablet */
+
+@media (max-width: 950px) {
+
+    .waterfall-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .waterfall-details-section {
+        padding: 60px 5% 80px;
+    }
+
+    .waterfall-details-header h2 {
+        font-size: 35px;
+    }
+
+    .waterfall-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .waterfall-detail-card img {
+        height: 220px;
+    }
+
+}
+/* =====================================================
+   TRAVEL ESSENTIALS
+   ===================================================== */
+
+.travel-essentials-section {
+    padding: 90px 6% 70px;
+    background: #ffffff;
+    text-align: center;
+}
+
+
+/* ================= HEADER ================= */
+
+.travel-essentials-header {
+    margin-bottom: 55px;
+}
+
+.travel-essentials-header p {
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: #0d4b2e;
+    margin-bottom: 12px;
+}
+
+.travel-essentials-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    color: #174d35;
+    margin: 0 0 12px;
+}
+
+.travel-red-line {
+    width: 75px;
+    height: 2px;
+    background: #e53935;
+    margin: 0 auto;
+}
+
+
+/* ================= MAIN ITEMS ================= */
+
+.travel-essential-slider {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    gap: 30px;
+}
+
+
+.travel-essential-item {
+    width: 170px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+
+.travel-essential-item:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ================= ICON ================= */
+
+.travel-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #0d4b2e;
+
+    font-size: 40px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.travel-essential-item:hover .travel-icon {
+    transform: scale(1.12);
+
+    color: #174d35;
+}
+
+
+/* ================= TITLE ================= */
+
+.travel-essential-item h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    color: #174d35;
+
+    margin: 0;
+}
+
+
+/* ================= ARROWS ================= */
+
+.travel-arrows {
+    margin-top: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.travel-arrows button {
+    width: 65px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.travel-arrows button:first-child {
+    color: #999;
+}
+
+
+.travel-arrows button:last-child {
+    color: #e53935;
+}
+
+
+.travel-arrows button:hover {
+    transform: scale(1.15);
+}
+
+
+/* =====================================================
+   TRAVEL DETAILS
+   ===================================================== */
+
+.travel-details-section {
+    display: none;
+
+    padding: 85px 6% 100px;
+
+    background: #f8faf8;
+}
+
+
+.travel-detail-content {
+    display: none;
+}
+
+
+/* ================= HEADER ================= */
+
+.travel-detail-header {
+    text-align: center;
+
+    max-width: 780px;
+
+    margin: 0 auto 50px;
+}
+
+
+.travel-detail-header p:first-child {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: #c62828;
+
+    margin-bottom: 12px;
+}
+
+
+.travel-detail-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 44px;
+
+    color: #0d4b2e;
+
+    margin: 0 0 18px;
+}
+
+
+.travel-detail-line {
+    width: 65px;
+
+    height: 3px;
+
+    background: #e53935;
+
+    margin: 0 auto 20px;
+}
+
+
+.travel-detail-header p:last-child {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   BUS / AIRLINES / TRAIN CARDS
+   ===================================================== */
+
+.travel-info-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.travel-info-card {
+    background: #ffffff;
+
+    padding: 28px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+    transition: .3s ease;
+}
+
+
+.travel-info-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,.14);
+}
+
+
+.travel-info-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #174d35;
+
+    font-size: 23px;
+
+    margin: 0 0 12px;
+}
+
+
+.travel-info-card p {
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* ================= WEBSITE BUTTON ================= */
+
+.travel-website-btn {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 9px 18px;
+
+    border: 1px solid #174d35;
+
+    border-radius: 20px;
+
+    color: #174d35;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.travel-website-btn:hover {
+    background: #174d35;
+
+    color: white;
+}
+
+
+/* =====================================================
+   TOUR GUIDE
+   ===================================================== */
+
+.travel-guide-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.travel-guide-card {
+    background: #ffffff;
+
+    padding: 28px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+    transition: .3s ease;
+}
+
+
+.travel-guide-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,.14);
+}
+
+
+.travel-guide-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #174d35;
+
+    font-size: 22px;
+
+    margin: 0 0 16px;
+}
+
+
+.travel-guide-card p {
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 7px 0;
+}
+
+
+.travel-guide-card a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #c62828;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.travel-guide-card a:hover {
+    text-decoration: underline;
+}
+
+
+.shopping-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+.shopping-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.shopping-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.16);
+}
+
+
+.shopping-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.shopping-content {
+    padding: 24px;
+}
+
+
+.shopping-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: #174d35;
+
+    margin: 0 0 12px;
+}
+
+
+.shopping-content p {
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0 0 15px;
+}
+
+
+.shopping-content span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+@media (max-width: 950px) {
+
+    .shopping-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .shopping-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .travel-essential-slider {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 15px;
+    }
+
+    .travel-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shopping-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .travel-essentials-section {
+        padding: 60px 5%;
+    }
+
+    .travel-essentials-header h2 {
+        font-size: 32px;
+    }
+
+    .travel-essential-slider {
+        gap: 25px;
+    }
+
+    .travel-info-grid,
+    .travel-guide-grid,
+    .shopping-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-detail-header h2 {
+        font-size: 34px;
+    }
+
+}
+/* ================= HERITAGE SLIDER ================= */
+
+.heritage-slider-section {
+    display: none;
+    width: 100%;
+    background: #ffffff;
+    padding: 0;
+    overflow: hidden;
+}
+
+.heritage-slider-section.show-heritage {
+    display: block;
+}
+
+
+/* MAIN SLIDER */
+
+.heritage-slider {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+/* MAIN IMAGE */
+
+.heritage-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.heritage-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #f5f5f5;
+
+    animation: heritageImageAnimation 0.7s ease;
+}
+
+/* DARK OVERLAY */
+
+.heritage-dark-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.25),
+            rgba(0,0,0,0.05) 45%,
+            rgba(0,0,0,0.65)
+        );
+}
+
+
+/* PLACE INFORMATION */
+
+.heritage-place-info {
+    position: absolute;
+
+    top: 55px;
+    right: 7%;
+
+    width: 390px;
+
+    padding: 28px 32px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    color: #222;
+
+    border-radius: 12px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+
+    z-index: 5;
+}
+
+.heritage-place-info h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 32px;
+    font-weight: 500;
+
+    line-height: 1.2;
+    color: #174d35;
+
+    margin: 0 0 15px;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 15px;
+}
+
+
+.heritage-location {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 15px;
+
+    color: #333;
+
+    margin-bottom: 15px;
+}
+
+.heritage-location span:first-child {
+    font-size: 18px;
+}
+
+
+.heritage-place-info p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+    color: #555;
+
+    max-width: 100%;
+}
+
+/* THUMBNAILS */
+
+.heritage-thumbnails {
+    position: absolute;
+
+    bottom: -1px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 32px;
+
+    z-index: 10;
+}
+
+
+.heritage-thumb {
+    width: 150px;
+    height: 95px;
+
+    background: white;
+
+    padding: 4px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+
+.heritage-thumb img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.heritage-thumb:hover {
+    transform: translateY(-10px);
+}
+
+
+.heritage-thumb.active {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.35);
+}
+
+
+/* ARROWS */
+
+.heritage-navigation {
+    position: absolute;
+
+    bottom: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 420px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+.heritage-navigation button {
+    pointer-events: auto;
+
+    width: 55px;
+    height: 45px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 45px;
+
+    font-weight: 300;
+
+    line-height: 35px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.heritage-navigation button:hover {
+    transform: scale(1.25);
+
+    color: #e53935;
+}
+
+
+/* IMAGE CHANGE ANIMATION */
+
+@keyframes heritageImageAnimation {
+
+    from {
+        opacity: 0;
+        transform: scale(1.04);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .heritage-slider {
+        height: 600px;
+    }
+
+    .heritage-place-info {
+        top: 45px;
+        right: 5%;
+
+        width: 330px;
+    }
+
+    .heritage-place-info h2 {
+        font-size: 29px;
+    }
+
+    .heritage-thumbnails {
+        gap: 15px;
+    }
+
+    .heritage-thumb {
+        width: 125px;
+        height: 80px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .heritage-slider {
+        height: 650px;
+    }
+
+    .heritage-place-info {
+
+        top: 35px;
+        left: 7%;
+        right: 7%;
+
+        width: auto;
+    }
+
+    .heritage-place-info h2 {
+        font-size: 27px;
+    }
+
+    .heritage-place-info p {
+        font-size: 13px;
+    }
+
+    .heritage-thumbnails {
+
+        bottom: 55px;
+
+        width: 95%;
+
+        justify-content: center;
+
+        gap: 7px;
+    }
+
+    .heritage-thumb {
+
+        width: 70px;
+        height: 55px;
+
+        padding: 3px;
+    }
+
+    .heritage-navigation {
+
+        bottom: 5px;
+
+        width: 90%;
+    }
+
+    .heritage-navigation button {
+        font-size: 38px;
+    }
+
+}
