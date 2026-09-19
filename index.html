@@ -203,33 +203,37 @@
     <div class="category-carousel">
 
         <!-- Beaches -->
-        <div class="explore-card active" onclick="goToCategory(0)">
-            <img src="images/beach.jpg" alt="Beaches">
+        <div class="explore-card" onclick="showBeachDetails()">
 
-            <div class="explore-card-overlay"></div>
+    <img src="images/beach.jpg" alt="Beaches">
 
-            <div class="explore-card-name">
-                <span>COASTAL</span>
-                <h3>Beaches</h3>
-            </div>
-        </div>
+    <div class="explore-card-overlay"></div>
+
+    <div class="explore-card-name">
+        <span>COASTAL</span>
+        <h3>Beaches</h3>
+    </div>
+
+</div>
 
 
         <!-- Waterfalls -->
-        <div class="explore-card" onclick="goToCategory(1)">
-            <img src="images/waterfall.jpg" alt="Waterfalls">
+        <div class="explore-card" onclick="showWaterfallDetails()">
 
-            <div class="explore-card-overlay"></div>
+    <img src="images/waterfall.jpg" alt="Waterfalls">
 
-            <div class="explore-card-name">
-                <span>SCENIC</span>
-                <h3>Waterfalls</h3>
-            </div>
-        </div>
+    <div class="explore-card-overlay"></div>
+
+    <div class="explore-card-name">
+        <span>SCENIC</span>
+        <h3>Waterfalls</h3>
+    </div>
+
+</div>
 
 
         <!-- Hills & Mountains -->
-        <div class="explore-card" onclick="goToCategory(2)">
+        <div class="explore-card" onclick="showHillDetails()">
             <img src="images/hills.jpg" alt="Hills and Mountains">
 
             <div class="explore-card-overlay"></div>
@@ -242,7 +246,7 @@
 
 
         <!-- Islands -->
-        <div class="explore-card" onclick="goToCategory(3)">
+        <div class="explore-card" onclick="showIslandDetails()">
             <img src="images/island.jpg" alt="Islands">
 
             <div class="explore-card-overlay"></div>
@@ -268,7 +272,7 @@
 
 
         <!-- Parks & Nature -->
-        <div class="explore-card" onclick="goToCategory(5)">
+        <div class="explore-card" onclick="showNatureDetails()">
             <img src="images/nature.jpg" alt="Parks and Nature">
 
             <div class="explore-card-overlay"></div>
@@ -281,7 +285,7 @@
 
 
         <!-- Religious Places -->
-        <div class="explore-card" onclick="goToCategory(6)">
+        <div class="explore-card" onclick="showReligiousDetails()">
             <img src="images/religious.jpg" alt="Religious Places">
 
             <div class="explore-card-overlay"></div>
@@ -294,7 +298,7 @@
 
 
         <!-- Hotels & Resorts -->
-        <div class="explore-card" onclick="goToCategory(7)">
+        <div class="explore-card" onclick="showHotelDetails()">
             <img src="images/hotels.jpg" alt="Hotels and Resorts">
 
             <div class="explore-card-overlay"></div>
@@ -327,6 +331,7 @@
 </section>
 
 <!-- ================= END EXPLORE BY CATEGORY ================= -->
+ 
  <!-- ================= HERITAGE & HISTORY ================= -->
 
 <section class="heritage-slider-section" id="heritageDetails">
@@ -432,6 +437,1098 @@
 </section>
 
 <!-- ================= END HERITAGE & HISTORY ================= -->
+ <!-- ================= HILLS & MOUNTAINS DETAILS ================= -->
+
+<section class="hill-slider-section" id="hillDetails">
+
+    <div class="hill-slider">
+
+        <!-- Main Image -->
+        <div class="hill-main">
+
+            <img id="hillMainImage"
+                 src="images/chandranath.jpg"
+                 alt="Chandranath Hill">
+
+            <div class="hill-dark-overlay"></div>
+
+            <div class="hill-place-info">
+
+                <h2 id="hillPlaceName">
+                    Chandranath Hill
+                </h2>
+
+                <div class="hill-location">
+                    <span>📍</span>
+
+                    <span id="hillLocation">
+                        Sitakunda, Chattogram
+                    </span>
+                </div>
+
+                <p id="hillDescription">
+                    The highest peak of the Chattogram Western Hill Range,
+                    known for its scenic views and hill trails.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Thumbnails -->
+
+        <div class="hill-thumbnails">
+
+            <div class="hill-thumb active"
+                 onclick="changeHill(0)">
+                <img src="images/chandranath.jpg"
+                     alt="Chandranath Hill">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(1)">
+                <img src="images/batali-hill.jpg"
+                     alt="Batali Hill">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(2)">
+                <img src="images/crb-hill.jpg"
+                     alt="CRB Hill">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(3)">
+                <img src="images/jilapi-pahar.jpg"
+                     alt="Jilapi Pahar">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(4)">
+                <img src="images/tiger-pass.jpg"
+                     alt="Tiger Pass Hill">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(5)">
+                <img src="images/moti-jharna.jpg"
+                     alt="Moti Jharna Hill">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(6)">
+                <img src="images/court-hill.jpg"
+                     alt="Court Hill">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(7)">
+                <img src="images/dc-hill.jpg"
+                     alt="DC Hill">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(8)">
+                <img src="images/foys-lake-hill.jpg"
+                     alt="Foy's Lake Hill Area">
+            </div>
+
+            <div class="hill-thumb"
+                 onclick="changeHill(9)">
+                <img src="images/nangarkhana-hill.jpg"
+                     alt="Nangarkhana Hill">
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <div class="hill-navigation">
+
+            <button onclick="previousHill()">‹</button>
+
+            <button onclick="nextHill()">›</button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= ISLANDS ================= -->
+
+<section class="island-slider-section" id="islandDetails">
+
+    <div class="island-slider">
+
+        <!-- MAIN IMAGE -->
+
+        <div class="island-main">
+
+            <img id="islandMainImage"
+                 src="images/sandwip-island.jpg"
+                 alt="Sandwip Island">
+
+            <div class="island-dark-overlay"></div>
+
+
+            <!-- INFORMATION BOX -->
+
+            <div class="island-place-info">
+
+                <span class="island-small-title">
+                    ISLANDS OF CHATTOGRAM
+                </span>
+
+                <h2 id="islandPlaceName">
+                    Sandwip Island
+                </h2>
+
+                <div class="island-location">
+
+                    <span>📍</span>
+
+                    <span id="islandLocation">
+                        Sandwip, Chattogram
+                    </span>
+
+                </div>
+
+                <div class="island-line"></div>
+
+                <p id="islandDescription">
+                    Sandwip Island is a beautiful coastal island
+                    known for its natural scenery, beaches and
+                    peaceful island environment.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- THUMBNAILS -->
+
+        <div class="island-thumbnails">
+
+            <!-- 1. Sandwip -->
+
+            <div class="island-thumb active"
+                 onclick="changeIsland(0)">
+
+                <img src="images/sandwip-island.jpg"
+                     alt="Sandwip Island">
+
+                <span>Sandwip Island</span>
+
+            </div>
+
+
+            <!-- 2. Amanullah Char -->
+
+            <div class="island-thumb"
+                 onclick="changeIsland(1)">
+
+                <img src="images/amanullah-char.jpg"
+                     alt="Amanullah Char">
+
+                <span>Amanullah Char</span>
+
+            </div>
+
+
+            <!-- 3. Urir Char -->
+
+            <div class="island-thumb"
+                 onclick="changeIsland(2)">
+
+                <img src="images/urir-char.jpg"
+                     alt="Urir Char">
+
+                <span>Urir Char</span>
+
+            </div>
+
+
+            <!-- 4. Kalapania -->
+
+            <div class="island-thumb"
+                 onclick="changeIsland(3)">
+
+                <img src="images/kalapania.jpg"
+                     alt="Kalapania">
+
+                <span>Kalapania</span>
+
+            </div>
+
+
+            
+
+
+        <!-- ARROWS -->
+
+        <div class="island-navigation">
+
+            <button onclick="previousIsland()">
+                ‹
+            </button>
+
+            <button onclick="nextIsland()">
+                ›
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END ISLANDS ================= -->
+ <!-- ================= HOTELS & RESORTS DETAILS ================= -->
+
+<section class="hotel-slider-section" id="hotelDetails">
+
+    <div class="hotel-slider">
+
+        <!-- Main Image -->
+
+        <div class="hotel-main">
+
+            <img id="hotelMainImage"
+                 src="images/radisson.jpg"
+                 alt="Radisson Blu Hotel">
+
+            <div class="hotel-dark-overlay"></div>
+
+            <div class="hotel-place-info">
+
+                <h2 id="hotelPlaceName">
+                    Radisson Blu Hotel, Chattogram Bay View
+                </h2>
+
+                <div class="hotel-location">
+
+                    <span>📍</span>
+
+                    <span id="hotelLocation">
+                        Lalkhan Bazar, Chattogram
+                    </span>
+
+                </div>
+
+                <p id="hotelDescription">
+                    An upscale hotel offering modern rooms,
+                    restaurants, an infinity pool, spa,
+                    fitness facilities and event spaces.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Thumbnails -->
+
+        <div class="hotel-thumbnails">
+
+            <div class="hotel-thumb active"
+                 onclick="changeHotel(0)">
+                <img src="images/radisson.jpg"
+                     alt="Radisson Blu Hotel">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(1)">
+                <img src="images/peninsula.jpg"
+                     alt="The Peninsula Chittagong">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(2)">
+                <img src="images/hotel-agrabad.jpg"
+                     alt="Hotel Agrabad">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(3)">
+                <img src="images/best-western-sks.jpg"
+                     alt="Best Western SKS">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(4)">
+                <img src="images/well-park.jpg"
+                     alt="Well Park Residence">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(5)">
+                <img src="images/foys-lake-resort.jpg"
+                     alt="Foy's Lake Resort">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(6)">
+                <img src="images/jatra.jpg"
+                     alt="Jatra Flagship">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(7)">
+                <img src="images/brisa-marina.jpg"
+                     alt="Brisa Marina">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(8)">
+                <img src="images/sea-world-resort.jpg"
+                     alt="Sea World Foy's Lake Resort">
+            </div>
+
+            <div class="hotel-thumb"
+                 onclick="changeHotel(9)">
+                <img src="images/crown-city.jpg"
+                     alt="Hotel Crown City">
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <div class="hotel-navigation">
+
+            <button onclick="previousHotel()">‹</button>
+
+            <button onclick="nextHotel()">›</button>
+
+        </div>
+
+    </div>
+
+</section>
+ <!-- ================= RELIGIOUS PLACES ================= -->
+
+<section class="religious-slider-section" id="religiousDetails">
+
+    <div class="religious-slider">
+
+        <!-- MAIN IMAGE -->
+
+        <div class="religious-main">
+
+            <img id="religiousMainImage"
+                 src="images/bayazid-bostami.jpg"
+                 alt="Bayazid Bostami Shrine">
+
+            <div class="religious-dark-overlay"></div>
+
+
+            <!-- INFORMATION BOX -->
+
+            <div class="religious-place-info">
+
+                <span class="religious-small-title">
+                    RELIGIOUS HERITAGE OF CHATTOGRAM
+                </span>
+
+                <h2 id="religiousPlaceName">
+                    Bayazid Bostami Shrine
+                </h2>
+
+                <div class="religious-location">
+
+                    <span>📍</span>
+
+                    <span id="religiousLocation">
+                        Nasirabad, Chattogram
+                    </span>
+
+                </div>
+
+                <div class="religious-line"></div>
+
+                <p id="religiousDescription">
+                    Bayazid Bostami Shrine is an important
+                    religious and historical site in Chattogram,
+                    visited by devotees and visitors throughout the year.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- THUMBNAILS -->
+
+        <div class="religious-thumbnails">
+
+            <!-- 1. Bayazid Bostami -->
+
+            <div class="religious-thumb active"
+                 onclick="changeReligious(0)">
+
+                <img src="images/bayazid-bostami.jpg"
+                     alt="Bayazid Bostami Shrine">
+
+                <span>Bayazid Bostami</span>
+
+            </div>
+
+
+            <!-- 2. Anderkilla -->
+
+            <div class="religious-thumb"
+                 onclick="changeReligious(1)">
+
+                <img src="images/anderkilla.jpg"
+                     alt="Anderkilla Shahi Jame Mosque">
+
+                <span>Anderkilla Mosque</span>
+
+            </div>
+
+
+            <!-- 3. Chandranath Temple -->
+
+            <div class="religious-thumb"
+                 onclick="changeReligious(2)">
+
+                <img src="images/chandranath-temple.jpg"
+                     alt="Chandranath Temple">
+
+                <span>Chandranath Temple</span>
+
+            </div>
+
+
+            <!-- 4. Chandanpura Mosque -->
+
+            <div class="religious-thumb"
+                 onclick="changeReligious(3)">
+
+                <img src="images/chandanpura-mosque.jpg"
+                     alt="Chandanpura Mosque">
+
+                <span>Chandanpura Mosque</span>
+
+            </div>
+
+
+            <!-- 5. Shah Mohsen Aulia -->
+
+            <div class="religious-thumb"
+                 onclick="changeReligious(4)">
+
+                <img src="images/shah-mohsen-aulia.jpg"
+                     alt="Hazrat Shah Mohsen Aulia Mazar">
+
+                <span>Shah Mohsen Aulia</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARROWS -->
+
+        <div class="religious-navigation">
+
+            <button onclick="previousReligious()">
+                ‹
+            </button>
+
+            <button onclick="nextReligious()">
+                ›
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= END RELIGIOUS PLACES ================= -->
+ <!-- BEACH DETAILS SLIDER -->
+<section class="beach-slider-section" id="beachDetails">
+
+    <div class="beach-slider">
+
+        <!-- MAIN IMAGE -->
+        <div class="beach-main">
+
+            <img id="beachMainImage"
+                 src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patenga%20sea%20beach%20001.jpg"
+                 alt="Patenga Sea Beach">
+
+            <div class="beach-dark-overlay"></div>
+
+            <!-- WHITE INFORMATION BOX -->
+            <div class="beach-place-info">
+
+                <span class="beach-small-title">
+                    BEACHES OF CHATTOGRAM
+                </span>
+
+                <h2 id="beachPlaceName">
+                    Patenga Sea Beach
+                </h2>
+
+                <div class="beach-location">
+
+                    <span>📍</span>
+
+                    <span id="beachLocation">
+                        Patenga, Chattogram City
+                    </span>
+
+                </div>
+
+                <div class="beach-line"></div>
+
+                <p id="beachDescription">
+                    Patenga Sea Beach is one of the most popular
+                    coastal destinations of Chattogram, known for
+                    its sea views, sunset and nearby port activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- THUMBNAILS -->
+        <div class="beach-thumbnails">
+
+            <!-- 1 -->
+            <div class="beach-thumb active"
+                 onclick="changeBeach(0)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Patenga%20sea%20beach%20001.jpg"
+                     alt="Patenga Sea Beach">
+
+                <span>Patenga</span>
+
+            </div>
+
+
+            <!-- 2 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(1)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Parki%20Beach1.jpg"
+                     alt="Parki Sea Beach">
+
+                <span>Parki</span>
+
+            </div>
+
+
+            <!-- 3 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(2)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Guliakhali%20sea%20beach%20chottogram%2C%20Bangladesh.jpg"
+                     alt="Guliakhali Sea Beach">
+
+                <span>Guliakhali</span>
+
+            </div>
+
+
+            <!-- 4 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(3)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bashbaria%20sea%20beach.jpg"
+                     alt="Banshbaria Sea Beach">
+
+                <span>Banshbaria</span>
+
+            </div>
+
+
+            <!-- 5 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(4)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Banshkhali%20Sea%20Beach%2002.jpg"
+                     alt="Banshkhali Sea Beach">
+
+                <span>Banshkhali</span>
+
+            </div>
+
+
+            <!-- 6 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(5)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kumira%20Ghat%2C%20Chittagong.jpg"
+                     alt="Kumira Coastal Area">
+
+                <span>Kumira</span>
+
+            </div>
+
+
+            <!-- 7 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(6)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20girl%20watching%20the%20view%20of%20nature.jpg"
+                     alt="Kattali Beach">
+
+                <span>Kattali</span>
+
+            </div>
+
+
+            <!-- 8 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(7)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sagoria%20Beach%20Chittagong%20%281%29.jpg"
+                     alt="Sagoria Beach">
+
+                <span>Sagoria</span>
+
+            </div>
+
+
+            <!-- 9 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(8)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Aananda%20Bazar%20sea%20beach.JPG"
+                     alt="Anandabazar Beach">
+
+                <span>Anandabazar</span>
+
+            </div>
+
+
+            <!-- 10 -->
+            <div class="beach-thumb"
+                 onclick="changeBeach(9)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Halishahar%20sea%20beach%20chittagong.jpg"
+                     alt="Halishahar Beach">
+
+                <span>Halishahar</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARROWS -->
+        <div class="beach-navigation">
+
+            <button onclick="previousBeach()">‹</button>
+
+            <button onclick="nextBeach()">›</button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     WATERFALL DETAILS SLIDER
+========================================= -->
+
+<section class="waterfall-slider-section" id="waterfallDetails">
+
+    <div class="waterfall-slider">
+
+        <!-- MAIN IMAGE -->
+        <div class="waterfall-main">
+
+            <img id="waterfallMainImage"
+                 src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Khoiyachora%20Waterfall%2C%20Mirosorai%2C%20Chittagong%2C.JPG"
+                 alt="Khoiyachora Waterfall">
+
+            <div class="waterfall-dark-overlay"></div>
+
+
+            <!-- WHITE INFORMATION BOX -->
+            <div class="waterfall-place-info">
+
+                <span class="waterfall-small-title">
+                    WATERFALLS OF CHATTOGRAM
+                </span>
+
+                <h2 id="waterfallPlaceName">
+                    Khoiyachora Waterfall
+                </h2>
+
+                <div class="waterfall-location">
+
+                    <span>📍</span>
+
+                    <span id="waterfallLocation">
+                        Mirsharai, Chattogram
+                    </span>
+
+                </div>
+
+                <div class="waterfall-line"></div>
+
+                <p id="waterfallDescription">
+                    Khoiyachora Waterfall is one of the most
+                    popular waterfalls of Chattogram, known for
+                    its beautiful multi-step cascades and green
+                    hill surroundings.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             THUMBNAILS
+        ====================================== -->
+
+        <div class="waterfall-thumbnails">
+
+
+            <!-- 1. KHOIYACHORA -->
+            <div class="waterfall-thumb active"
+                 onclick="changeWaterfall(0)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Khoiyachora%20Waterfall%2C%20Mirosorai%2C%20Chittagong%2C.JPG"
+                     alt="Khoiyachora Waterfall">
+
+                <span>Khoiyachora</span>
+
+            </div>
+
+
+            <!-- 2. SUPTADHARA -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(1)">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/%E0%A6%AC%E0%A6%B0%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0_%E0%A6%B8%E0%A7%8C%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A7%8D%E0%A6%AF_%E0%A6%B8%E0%A7%81%E0%A6%AA%E0%A7%8D%E0%A6%A4%E0%A6%A7%E0%A6%BE%E0%A6%B0%E0%A6%BE_%E0%A6%9D%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BE_01.jpg"
+                     alt="Suptadhara Waterfall">
+
+                <span>Suptadhara</span>
+
+            </div>
+
+
+            <!-- 3. SHAHASRADHARA -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(2)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Shahasradhara%20Waterfall.jpg"
+                     alt="Shahasradhara Waterfall">
+
+                <span>Shahasradhara</span>
+
+            </div>
+
+
+            <!-- 4. NAPITTACHORA -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(3)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Napittachora%20Waterfall.jpg"
+                     alt="Napittachora Waterfall">
+
+                <span>Napittachora</span>
+
+            </div>
+
+
+            <!-- 5. KOMOLDOHO -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(4)">
+
+                <img src="https://s0.wklcdn.com/image_20/605439/45427029/29868117Master.jpg"
+                     alt="Komoldoho Waterfall">
+
+                <span>Komoldoho</span>
+
+            </div>
+
+
+            <!-- 6. SONAICHORA -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(5)">
+
+                <img src="https://assets.roar.media/assets/zTIwozLzqLikqNWL_%E0%A6%B8%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%87%E0%A6%9B%E0%A7%9C%E0%A6%BF-%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%87%E0%A6%B2.jpg?w=1200"
+                     alt="Sonaichora Waterfall">
+
+                <span>Sonaichora</span>
+
+            </div>
+
+
+            <!-- 7. HORINMARA -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(6)">
+
+                <img src="https://adarbepari.com/wp-content/uploads/2019/08/horinmara-jhorna-sitakunda.jpg"
+                     alt="Horinmara Waterfall">
+
+                <span>Horinmara</span>
+
+            </div>
+
+
+            <!-- 8. HATUVANGA -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(7)">
+
+                <img src="https://i.postimg.cc/Y2mSmWmb/Zorna-03-2.jpg"
+                     alt="Hatuvanga Waterfall">
+
+                <span>Hatuvanga</span>
+
+            </div>
+
+
+            <!-- 9. BAGHBIYANI -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(8)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/June%202025%20photo%20of%20Baghbiyani%20Waterfall%20by%20Owais%20Al%20Qarni%2004.jpg"
+                     alt="Baghbiyani Waterfall">
+
+                <span>Baghbiyani</span>
+
+            </div>
+
+
+            <!-- 10. KUPIKATAKUM -->
+            <div class="waterfall-thumb"
+                 onclick="changeWaterfall(9)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Napittachora%20Fountain%20Mirsharai%20%281%29%20-%209.jpg"
+                     alt="Kupikatakum Waterfall">
+
+                <span>Kupikatakum</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARROWS -->
+        <div class="waterfall-navigation">
+
+            <button onclick="previousWaterfall()">‹</button>
+
+            <button onclick="nextWaterfall()">›</button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     PARKS & NATURE DETAILS SLIDER
+========================================= -->
+
+<section class="nature-slider-section" id="natureDetails">
+
+    <div class="nature-slider">
+
+        <!-- MAIN IMAGE -->
+        <div class="nature-main">
+
+            <img id="natureMainImage"
+                 src="https://www.thedailystar.net/sites/default/files/styles/big_1/public/images/2025/12/20/foys-lake.jpg"
+                 alt="Foy's Lake">
+
+            <div class="nature-dark-overlay"></div>
+
+
+            <!-- WHITE INFORMATION BOX -->
+            <div class="nature-place-info">
+
+                <span class="nature-small-title">
+                    PARKS & NATURE OF CHATTOGRAM
+                </span>
+
+                <h2 id="naturePlaceName">
+                    Foy's Lake
+                </h2>
+
+                <div class="nature-location">
+
+                    <span>📍</span>
+
+                    <span id="natureLocation">
+                        Pahartali, Chattogram
+                    </span>
+
+                </div>
+
+                <div class="nature-line"></div>
+
+                <p id="natureDescription">
+                    Foy's Lake is a beautiful man-made lake
+                    surrounded by hills, forests and scenic
+                    natural landscapes in Chattogram.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             THUMBNAILS
+        ====================================== -->
+
+        <div class="nature-thumbnails">
+
+
+            <!-- 1. FOY'S LAKE -->
+
+            <div class="nature-thumb active"
+     onclick="changeNature(0)">
+    <img src="images/foys-lake1.jpg"
+         alt="Foy's Lake">
+</div>
+
+
+            <!-- 2. SITAKUNDA ECO PARK -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(1)">
+
+                <img src="https://img.truvvle.com/?src=aHR0cHM6Ly9pbWcudHJhdmVsZmVlZC5pby9oYWZpenVsbGFoJTJGMjAyMDA0MDlUMDQxNzE2NjYxWi1TLTguanBn&width=1920"
+                     alt="Sitakunda Eco Park">
+
+                <span>Sitakunda Eco Park</span>
+
+            </div>
+
+
+            <!-- 3. MAHAMAYA -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(2)">
+
+                <img src="https://images.ecency.com/DQmUC9AHc9thViz2EVrEzVZDmr3ykMUMJeohhD3BifecGsD/img_20231021_163630.jpg"
+                     alt="Mahamaya Eco Park">
+
+                <span>Mahamaya</span>
+
+            </div>
+
+
+            <!-- 4. BHATIARY LAKE -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(3)">
+
+                <img src="https://d34vm3j4h7f97z.cloudfront.net/optimized/3X/2/3/23444bfe3cef9052e6f8da19809c83b54e8589b2_2_666x500.jpeg"
+                     alt="Bhatiary Lake">
+
+                <span>Bhatiary Lake</span>
+
+            </div>
+
+
+            <!-- 5. DC PARK -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(4)">
+
+                <img src="https://softwebsys.s3.us-east-1.amazonaws.com/uploads/1763033092992-ds-prk-4.width-750.webp"
+                     alt="DC Park">
+
+                <span>DC Park</span>
+
+            </div>
+
+
+            <!-- 6. JAMBOREE PARK -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(5)">
+
+                <img src="https://dscdn.daily-sun.com/english/uploads/news_photos/2018/09/10/daily-sun-2018-09-10-68.jpg"
+                     alt="Jamboree Park">
+
+                <span>Jamboree Park</span>
+
+            </div>
+
+
+            <!-- 7. BIPLOB UDYAN -->
+
+            <div class="nature-thumb"
+     onclick="changeNature(6)">
+    <img src="images/biplob-udyan.jpg"
+         alt="Biplob Udyan">
+</div>
+
+
+            <!-- 8. BUTTERFLY PARK -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(7)">
+
+                <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Butterfly%20Park%20Bangladesh%20%2801%29.jpg"
+                     alt="Butterfly Park Bangladesh">
+
+                <span>Butterfly Park</span>
+
+            </div>
+
+
+            <!-- 9. FOREST ACADEMY -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(8)">
+
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80"
+                     alt="Forest Academy Botanical Park">
+
+                <span>Forest Academy</span>
+
+            </div>
+
+
+            <!-- 10. KARNAPHULI MARINERS PARK -->
+
+            <div class="nature-thumb"
+                 onclick="changeNature(9)">
+
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80"
+                     alt="Karnaphuli Mariners Park">
+
+                <span>Mariners Park</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ARROWS -->
+
+        <div class="nature-navigation">
+
+            <button onclick="previousNature()">‹</button>
+
+            <button onclick="nextNature()">›</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
     <!-- ================= EXPLORE CATEGORIES ================= -->
 
 <!-- ================= CATEGORY SECTION ================= -->
@@ -462,17 +1559,20 @@
 
 
         <!-- Beaches -->
-<div class="recommendation-card rec-beach"
-     onclick="openBeachDetails()">
+<div class="category-card beach-card"
+     onclick="selectCategory(this)">
 
-    <img src="images/beaches.jpg"
+    <img src="images/beach.jpg"
          alt="Beaches">
 
-    <div class="rec-overlay"></div>
+    <div class="card-overlay"></div>
 
-    <div class="rec-title">
+    <div class="card-title">
+
         <span>COASTAL</span>
+
         <h3>Beaches</h3>
+
     </div>
 
 </div>
