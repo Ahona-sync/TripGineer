@@ -2988,6 +2988,220 @@ function previousHotel() {
 
     changeHotel(currentHotel);
 
+}
+document.addEventListener("DOMContentLoaded", () => {
+
+    const searchInput = document.getElementById("destinationSearch");
+    const searchButton = document.getElementById("searchButton");
+    const searchResults = document.getElementById("searchResults");
+
+    if (!searchInput || !searchResults) {
+        return;
+    }
+
+    async function searchDestinations() {
+
+        const query = searchInput.value.trim();
+
+        if (!query) {
+            searchResults.innerHTML = "";
+            searchResults.style.display = "none";
+            return;
+        }
+
+        try {
+
+            const response = await fetch(
+                `http://localhost:5000/api/search?q=${encodeURIComponent(query)}`
+            );
+
+            if (!response.ok) {
+                throw new Error("Search request failed");
+            }
+
+            const results = await response.json();
+
+            searchResults.innerHTML = "";
+
+            if (results.length === 0) {
+
+                searchResults.innerHTML = `
+                    <div class="search-no-result">
+                        No destination found
+                    </div>
+                `;
+
+                searchResults.style.display = "block";
+                return;
+            }
+
+            results.forEach(item => {
+
+                const resultDiv = document.createElement("div");
+
+                resultDiv.className = "search-result-item";
+
+                resultDiv.innerHTML = `
+                    <div class="search-result-name">
+                        ${item.name}
+                    </div>
+
+                    <div class="search-result-category">
+                        ${item.category}
+                    </div>
+                `;
+
+                resultDiv.addEventListener("click", () => {
+
+                    window.location.href = item.url;
+
+                });
+
+                searchResults.appendChild(resultDiv);
+
+            });
+
+            searchResults.style.display = "block";
+
+        } catch (error) {
+
+            console.error("Search error:", error);
+
+            searchResults.innerHTML = `
+                <div class="search-no-result">
+                    Unable to connect to database
+                </div>
+            `;
+
+            searchResults.style.display = "block";
+        }
+    }
+
+    searchInput.addEventListener("input", searchDestinations);
+
+    searchButton.addEventListener("click", searchDestinations);
+
+    searchInput.addEventListener("keydown", (event) => {
+
+        if (event.key === "Enter") {
+            searchDestinations();
+        }
+
+    });
+
+    document.addEventListener("click", (event) => {
+
+        if (!event.target.closest("#navSearch")) {
+            searchResults.style.display = "none";
+        }
+
+    });
+
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const category = (params.get("category") || "").trim().toLowerCase();
+    const placeName = (params.get("place") || "").trim().toLowerCase();
+
+    if (!category || !placeName) {
+        return;
+    }
+
+    let places = null;
+    let changeFunction = null;
+    let showFunction = null;
+
+    // Beaches
+    if (category === "beach") {
+        places = beachPlaces;
+        changeFunction = changeBeach;
+        showFunction = showBeachDetails;
+    }
+
+    // Waterfalls
+    else if (category === "waterfall") {
+        places = waterfallPlaces;
+        changeFunction = changeWaterfall;
+        showFunction = showWaterfallDetails;
+    }
+
+    // Hills & Mountains
+    else if (category === "hill") {
+        places = hillPlaces;
+        changeFunction = changeHill;
+        showFunction = showHillDetails;
+    }
+
+    // Islands
+    else if (category === "island") {
+        places = islandPlaces;
+        changeFunction = changeIsland;
+        showFunction = showIslandDetails;
+    }
+
+    // Heritage & History
+    else if (
+        category === "historical" ||
+        category === "history" ||
+        category === "museum"
+    ) {
+        places = heritagePlaces;
+        changeFunction = changeHeritage;
+        showFunction = showHeritageDetails;
+    }
+
+    // Parks & Nature
+    else if (
+        category === "park" ||
+        category === "nature" ||
+        category === "lake"
+    ) {
+        places = naturePlaces;
+        changeFunction = changeNature;
+        showFunction = showNatureDetails;
+    }
+
+    // Religious Places
+    else if (category === "religious") {
+        places = religiousPlaces;
+        changeFunction = changeReligious;
+        showFunction = showReligiousDetails;
+    }
+
+    // Hotels & Resorts
+    else if (
+        category === "hotel" ||
+        category === "resort"
+    ) {
+        places = hotelPlaces;
+        changeFunction = changeHotel;
+        showFunction = showHotelDetails;
+    }
+
+    // Category না মিললে কিছু করবে না
+    if (!places) {
+        return;
+    }
+
+    // Database-এর place name দিয়ে আমাদের array-এর place খুঁজবে
+    const index = places.findIndex(
+        place => place.name.trim().toLowerCase() === placeName
+    );
+
+    // Place পাওয়া গেলে সেই জায়গাটা দেখাবে
+    if (index !== -1) {
+        changeFunction(index);
+        showFunction();
+    }
+
+});
 
 }
 // =====================================================
