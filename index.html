@@ -1531,120 +1531,83 @@
 
     <!-- ================= EXPLORE CATEGORIES ================= -->
 
-<!-- ================= CATEGORY SECTION ================= -->
+<!-- ================= NEW RECOMMENDATION SECTION ================= -->
+<section class="recommendation-section">
+    
+    <!-- Section Header -->
+    <p class="rec-small-title">POPULAR IN CHATTOGRAM</p>
+    <h2 class="rec-main-title">Our Recommendations</h2>
+    <div class="rec-red-line"></div>
 
-<section class="category-section">
+    <!-- 2x3 Grid Container -->
+    <div class="recommendation-grid">
 
-    <p class="category-small-title">POPULAR IN CHATTOGRAM</p>
-
-    <h2>Our Recommendations</h2>
-
-    <div class="red-line"></div>
-
-    <div class="category-collage">
-
-        <!-- Waterfall -->
-        <div class="category-card waterfall-card"
-             onclick="openWaterfallDetails()">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.ooGPCigZ5MX5ZlXdzJdDbgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-                 alt="Waterfalls">
-
-            <div class="card-overlay"></div>
-
-            <div class="card-title">
+        <!-- Card 1: Waterfalls -->
+        <div class="rec-card" onclick="openRecDetails('waterfallGridDetails')">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.ooGPCigZ5MX5ZlXdzJdDbgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Waterfalls">
+            <div class="rec-card-overlay"></div>
+            <div class="rec-card-title">
                 <span>SCENIC</span>
                 <h3>Waterfalls</h3>
             </div>
         </div>
 
+        <!-- Card 2: Beaches -->
+        <div class="rec-card" onclick="openRecDetails('beachGridDetails')">
+            <img src="images/beach.jpg" alt="Beaches">
+            <div class="rec-card-overlay"></div>
+            <div class="rec-card-title">
+                <span>COASTAL</span>
+                <h3>Beaches</h3>
+            </div>
+        </div>
 
-        <!-- Beaches -->
-<div class="category-card beach-card"
-     onclick="selectCategory(this)">
-
-    <img src="images/beach.jpg"
-         alt="Beaches">
-
-    <div class="card-overlay"></div>
-
-    <div class="card-title">
-
-        <span>COASTAL</span>
-
-        <h3>Beaches</h3>
-
-    </div>
-
-</div>
-
-        <!-- Food -->
-        <div class="category-card food-card"
-     onclick="openFoodDetails()">
-            <img src="https://www.thespruceeats.com/thmb/XDBL9gA6A6nYWUdsRZ3QwH084rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-chicken-biryani-recipe-7367850-hero-A-ed211926bb0e4ca1be510695c15ce111.jpg"
-                 alt="Food">
-
-            <div class="card-overlay"></div>
-
-            <div class="card-title">
+        <!-- Card 3: Food -->
+        <div class="rec-card" onclick="openRecDetails('foodDetails')">
+            <img src="https://www.thespruceeats.com/thmb/XDBL9gA6A6nYWUdsRZ3QwH084rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-chicken-biryani-recipe-7367850-hero-A-ed211926bb0e4ca1be510695c15ce111.jpg" alt="Food">
+            <div class="rec-card-overlay"></div>
+            <div class="rec-card-title">
                 <span>AUTHENTIC</span>
                 <h3>Food & Cuisine</h3>
             </div>
         </div>
 
+        <!-- Card 4: Cultural Events -->
+        <div class="rec-card" onclick="openRecDetails('eventDetails')">
+            <img src="images/cultural-events.jpg" alt="Cultural Events">
+            <div class="rec-card-overlay"></div>
+            <div class="rec-card-title">
+                <span>TRADITIONAL</span>
+                <h3>Cultural Events</h3>
+            </div>
+        </div>
 
-        <!-- Cultural Events -->
-<div class="category-card events-card"
-     onclick="openEventDetails()">
-
-    <img src="images/cultural-events.jpg"
-         alt="Cultural Events">
-
-    <div class="card-overlay"></div>
-
-    <div class="card-title">
-        <span>TRADITIONAL</span>
-        <h3>Cultural Events</h3>
-    </div>
-
-</div>
-
-        <!-- Luxury -->
-<div class="category-card luxury-card"
-     onclick="openHotelDetails()">
-            <img src="https://tse4.mm.bing.net/th/id/OIP.nUa-rqfPL7Wgz4JqHlPWGgHaFE?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-                 alt="Luxury">
-
-            <div class="card-overlay"></div>
-
-            <div class="card-title">
+        <!-- Card 5: Luxury (Hotels) -->
+        <div class="rec-card" onclick="openRecDetails('hotelGridDetails')">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.nUa-rqfPL7Wgz4JqHlPWGgHaFE?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Luxury">
+            <div class="rec-card-overlay"></div>
+            <div class="rec-card-title">
                 <span>PREMIUM</span>
                 <h3>Luxury Escapes</h3>
             </div>
         </div>
 
-
-        <!-- Green Tourism -->
-        <div class="category-card green-card"
-             onclick="openGreenDetails()">
-            <img src="https://www.bangladeshtravelandtours.com/wp-content/uploads/2023/04/49-1024x768.jpg"
-                 alt="Green Tourism">
-
-            <div class="card-overlay"></div>
-
-            <div class="card-title">
+        <!-- Card 6: Green Tourism -->
+        <div class="rec-card" onclick="openRecDetails('greenDetails')">
+            <img src="https://www.bangladeshtravelandtours.com/wp-content/uploads/2023/04/49-1024x768.jpg" alt="Green Tourism">
+            <div class="rec-card-overlay"></div>
+            <div class="rec-card-title">
                 <span>NATURAL</span>
                 <h3>Green Tourism</h3>
             </div>
         </div>
 
     </div>
-
 </section>
-
-<!-- ================= END CATEGORY SECTION ================= -->
+<!-- ================= END NEW RECOMMENDATION SECTION ================= -->
  <!-- ================= HOTEL DETAILS ================= -->
 
-<section class="hotel-details-section" id="hotelDetails">
+<section class="hotel-details-section" id="hotelGridDetails">
 
     <div class="hotel-details-header">
 
@@ -1677,15 +1640,15 @@
                 <h3>1. Radisson Blu Hotel, Chattogram Bay View</h3>
 
                 <p class="hotel-location">
-                    📍 Lalkhan Bazar
+                     Lalkhan Bazar
                 </p>
 
                 <p class="hotel-phone">
-                    📞 +880 9612-600800
+                     +880 9612-600800
                 </p>
 
                 <div class="hotel-rating">
-                    ⭐ 4.6/5
+                     4.6/5
                 </div>
 
                 <h4>Why Popular</h4>
@@ -1720,15 +1683,15 @@
                 <h3>2. The Peninsula Chittagong</h3>
 
                 <p class="hotel-location">
-                    📍 O.R. Nizam Road
+                     O.R. Nizam Road
                 </p>
 
                 <p class="hotel-phone">
-                    📞 +880 24-1361101-15
+                     +880 24-1361101-15
                 </p>
 
                 <div class="hotel-rating">
-                    ⭐ 4.4/5
+                     4.4/5
                 </div>
 
                 <h4>Why Popular</h4>
@@ -1763,15 +1726,15 @@
                 <h3>3. Hotel Agrabad</h3>
 
                 <p class="hotel-location">
-                    📍 Agrabad C/A
+                     Agrabad C/A
                 </p>
 
                 <p class="hotel-phone">
-                    📞 +880 9612-600500
+                     +880 9612-600500
                 </p>
 
                 <div class="hotel-rating">
-                    ⭐ 4.3/5
+                     4.3/5
                 </div>
 
                 <h4>Why Popular</h4>
@@ -1805,15 +1768,15 @@
                 <h3>4. Best Western SKS Chattogram</h3>
 
                 <p class="hotel-location">
-                    📍 Agrabad C/A
+                     Agrabad C/A
                 </p>
 
                 <p class="hotel-phone">
-                    📞 +880 1313-444478
+                     +880 1313-444478
                 </p>
 
                 <div class="hotel-rating">
-                    ⭐ 4.3/5
+                     4.3/5
                 </div>
 
                 <h4>Why Popular</h4>
@@ -1847,15 +1810,15 @@
                 <h3>5. Well Park Residence</h3>
 
                 <p class="hotel-location">
-                    📍 O.R. Nizam Road
+                     O.R. Nizam Road
                 </p>
 
                 <p class="hotel-phone">
-                    📞 +880 1841-735551
+                     +880 1841-735551
                 </p>
 
                 <div class="hotel-rating">
-                    ⭐ 4.2/5
+                     4.2/5
                 </div>
 
                 <h4>Why Popular</h4>
@@ -1889,15 +1852,15 @@
                 <h3>6. Foy’s Lake Resort</h3>
 
                 <p class="hotel-location">
-                    📍 Foy’s Lake
+                     Foy’s Lake
                 </p>
 
                 <p class="hotel-phone">
-                    📞 +880 1973-676595
+                     +880 1973-676595
                 </p>
 
                 <div class="hotel-rating">
-                    ⭐ 4.2/5
+                     4.2/5
                 </div>
 
                 <h4>Why Popular</h4>
@@ -1931,15 +1894,15 @@
                 <h3>7. Jatra Flagship Chattogram City Centre</h3>
 
                 <p class="hotel-location">
-                    📍 Chattogram City
+                     Chattogram City
                 </p>
 
                 <p class="hotel-phone">
-                    📞 +880 1912-519918
+                     +880 1912-519918
                 </p>
 
                 <div class="hotel-rating">
-                    ⭐ 4.4/5
+                     4.4/5
                 </div>
 
                 <h4>Why Popular</h4>
@@ -2388,12 +2351,10 @@
                 <h3>Jabbarer Boli Khela</h3>
 
                 <p class="event-location">
-                    📍 Laldighi Maidan, Chattogram
+                     Laldighi Maidan, Chattogram
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐⭐
-                </p>
+               
 
                 <h4>Cultural Heritage</h4>
 
@@ -2443,13 +2404,10 @@
                 <h3>Jabbarer Boli Khela Boishakhi Mela</h3>
 
                 <p class="event-location">
-                    📍 Laldighi area, Chattogram
+                     Laldighi area, Chattogram
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐⭐
-                </p>
-
+                
                 <h4>Cultural Heritage</h4>
 
                 <h5>History & Tradition</h5>
@@ -2495,13 +2453,10 @@
                 <h3>Chattogram Mezban</h3>
 
                 <p class="event-location">
-                    📍 Chattogram
+                     Chattogram
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐⭐
-                </p>
-
+                
                 <h4>Cultural Heritage</h4>
 
                 <h5>History & Tradition</h5>
@@ -2548,13 +2503,10 @@
                 <h3>Pohela Boishakh / Nobo Borsho</h3>
 
                 <p class="event-location">
-                    📍 Chattogram
+                     Chattogram
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐⭐
-                </p>
-
+               
                 <h4>Cultural Heritage</h4>
 
                 <h5>History & Tradition</h5>
@@ -2600,13 +2552,10 @@
                 <h3>Chaitra Sankranti</h3>
 
                 <p class="event-location">
-                    📍 Chattogram
+                     Chattogram
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐½
-                </p>
-
+                
                 <h4>Cultural Heritage</h4>
 
                 <h5>History & Tradition</h5>
@@ -2650,17 +2599,14 @@
                 <h3>Biju</h3>
 
                 <p class="event-community">
-                    👥 Community: Chakma
+                     Community: Chakma
                 </p>
 
                 <p class="event-location">
-                    📍 Chittagong Hill Tracts
+                     Chittagong Hill Tracts
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐⭐
-                </p>
-
+                
                 <h4>Cultural Heritage</h4>
 
                 <h5>History & Tradition</h5>
@@ -2710,16 +2656,14 @@
                 <h3>Sangrai</h3>
 
                 <p class="event-community">
-                    👥 Community: Marma
+                     Community: Marma
                 </p>
 
                 <p class="event-location">
-                    📍 Chittagong Hill Tracts, especially Bandarban
+                     Chittagong Hill Tracts, especially Bandarban
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐⭐
-                </p>
+                
 
                 <h4>Cultural Heritage</h4>
 
@@ -2764,16 +2708,14 @@
                 <h3>Bishu</h3>
 
                 <p class="event-community">
-                    👥 Community: Tanchangya
+                     Community: Tanchangya
                 </p>
 
                 <p class="event-location">
-                    📍 Chittagong Hill Tracts
+                     Chittagong Hill Tracts
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐½
-                </p>
+                
 
                 <h4>Cultural Heritage</h4>
 
@@ -2819,12 +2761,10 @@
                 <h3>Boisabi</h3>
 
                 <p class="event-location">
-                    📍 Chittagong Hill Tracts
+                     Chittagong Hill Tracts
                 </p>
 
-                <p class="event-rating">
-                    ⭐⭐⭐⭐⭐
-                </p>
+                
 
                 <h4>Cultural Heritage</h4>
 
@@ -2880,7 +2820,7 @@
 <!-- ================= END CULTURAL EVENTS ================= -->
  <!-- ================= BEACH DETAILS ================= -->
 
-<section class="beach-details-section" id="beachDetails">
+<section class="beach-details-section" id="beachGridDetails">
 
     <!-- Section Heading -->
     <div class="beach-details-header">
@@ -2942,7 +2882,7 @@
                 <h3>Parki Sea Beach</h3>
 
                 <p class="beach-location">
-                    📍 Anwara, Chattogram
+                     Anwara, Chattogram
                 </p>
 
                 <p class="beach-description">
@@ -2969,7 +2909,7 @@
                 <h3>Guliakhali Sea Beach</h3>
 
                 <p class="beach-location">
-                    📍 Sitakunda, Chattogram
+                     Sitakunda, Chattogram
                 </p>
 
                 <p class="beach-description">
@@ -2996,7 +2936,7 @@
                 <h3>Banshbaria Sea Beach</h3>
 
                 <p class="beach-location">
-                    📍 Banshbaria, Sitakunda, Chattogram
+                     Banshbaria, Sitakunda, Chattogram
                 </p>
 
                 <p class="beach-description">
@@ -3023,7 +2963,7 @@
                 <h3>Sandwip Beach</h3>
 
                 <p class="beach-location">
-                    📍 Sandwip, Chattogram
+                     Sandwip, Chattogram
                 </p>
 
                 <p class="beach-description">
@@ -3079,7 +3019,7 @@
                 <h3>Sitakunda Eco Park</h3>
 
                 <p class="green-location">
-                    📍 Sitakunda, Chattogram
+                     Sitakunda, Chattogram
                 </p>
 
                 <p class="green-description">
@@ -3106,7 +3046,7 @@
                 <h3>Foy's Lake</h3>
 
                 <p class="green-location">
-                    📍 Pahartali, Chattogram
+                     Pahartali, Chattogram
                 </p>
 
                 <p class="green-description">
@@ -3133,7 +3073,7 @@
                 <h3>Chandranath Hill</h3>
 
                 <p class="green-location">
-                    📍 Sitakunda, Chattogram
+                     Sitakunda, Chattogram
                 </p>
 
                 <p class="green-description">
@@ -3160,7 +3100,7 @@
                 <h3>Dhopachhari</h3>
 
                 <p class="green-location">
-                    📍 Dhopachhari, Chattogram
+                     Dhopachhari, Chattogram
                 </p>
 
                 <p class="green-description">
@@ -3187,7 +3127,7 @@
                 <h3>Banshbaria</h3>
 
                 <p class="green-location">
-                    📍 Sitakunda, Chattogram
+                     Sitakunda, Chattogram
                 </p>
 
                 <p class="green-description">
@@ -3211,7 +3151,7 @@
 
 <!-- ================= END GREEN TOURISM DETAILS ================= -->
  <!-- WATERFALL DETAILS SECTION -->
-<section class="waterfall-details-section" id="waterfallDetails">
+<section class="waterfall-details-section" id="waterfallGridDetails">
 
     <div class="waterfall-details-header">
 
@@ -3244,7 +3184,7 @@
                 <h3>Khoiyachora Waterfalls</h3>
 
                 <p class="waterfall-location">
-                    📍 Mirsharai, Chattogram
+                     Mirsharai, Chattogram
                 </p>
 
                 <p class="waterfall-description">
@@ -3272,7 +3212,7 @@
                 <h3>Suptadhara Waterfall</h3>
 
                 <p class="waterfall-location">
-                    📍 Sitakunda, Chattogram
+                     Sitakunda, Chattogram
                 </p>
 
                 <p class="waterfall-description">
@@ -3300,7 +3240,7 @@
                 <h3>Napittachora Waterfall</h3>
 
                 <p class="waterfall-location">
-                    📍 Mirsharai, Chattogram
+                     Mirsharai, Chattogram
                 </p>
 
                 <p class="waterfall-description">
@@ -3328,7 +3268,7 @@
                 <h3>Komoldoho Waterfall</h3>
 
                 <p class="waterfall-location">
-                    📍 Sitakunda, Chattogram
+                     Sitakunda, Chattogram
                 </p>
 
                 <p class="waterfall-description">
@@ -3356,7 +3296,7 @@
                 <h3>Mithachora Waterfall</h3>
 
                 <p class="waterfall-location">
-                    📍 Mirsharai, Chattogram
+                     Mirsharai, Chattogram
                 </p>
 
                 <p class="waterfall-description">
@@ -3896,7 +3836,7 @@
                     </p>
 
                     <span>
-                        📍 Jubilee Road, Chattogram
+                         Jubilee Road, Chattogram
                     </span>
 
                 </div>
@@ -3923,7 +3863,7 @@
                     </p>
 
                     <span>
-                        📍 Nasirabad, Chattogram
+                         Nasirabad, Chattogram
                     </span>
 
                 </div>
@@ -3950,7 +3890,7 @@
                     </p>
 
                     <span>
-                        📍 Bayazid Bostami Road, Chattogram
+                         Bayazid Bostami Road, Chattogram
                     </span>
 
                 </div>
@@ -3977,7 +3917,7 @@
                     </p>
 
                     <span>
-                        📍 Teri Bazar, Chattogram
+                         Teri Bazar, Chattogram
                     </span>
 
                 </div>
@@ -4004,7 +3944,7 @@
                     </p>
 
                     <span>
-                        📍 Reazuddin Bazar, Chattogram
+                         Reazuddin Bazar, Chattogram
                     </span>
 
                 </div>
@@ -4152,9 +4092,8 @@
         <div class="important-link-card">
 
             <div class="important-logo police-logo">
-                <span>👮</span>
-            </div>
-
+    <img src="images/police-logo.png" alt="Bangladesh Police">
+</div>
             <div class="important-card-content">
 
                 <h3>Bangladesh Police</h3>
@@ -4184,8 +4123,8 @@
         <div class="important-link-card">
 
             <div class="important-logo fire-logo">
-                <span>🚒</span>
-            </div>
+    <img src="images/fire-service-logo.png" alt="Fire Service & Civil Defence">
+</div>
 
             <div class="important-card-content">
 
@@ -4216,11 +4155,8 @@
         <div class="important-link-card">
 
             <div class="important-logo mygov-logo">
-
-                <span>my</span>Gov
-
-            </div>
-
+    <img src="images/mygov-logo.png" alt="myGov Bangladesh">
+</div>
             <div class="important-card-content">
 
                 <h3>myGov Bangladesh</h3>

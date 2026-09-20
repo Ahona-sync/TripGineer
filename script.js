@@ -2988,4 +2988,24 @@ function previousHotel() {
 
     changeHotel(currentHotel);
 
+
+}
+// =====================================================
+// RECOMMENDATION DETAILS (ALL CARDS)
+// =====================================================
+function openRecDetails(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    
+    if (targetSection) {
+        // যদি সেকশনটি আগে থেকে hide করা থাকে, তবে তা show করবে
+        targetSection.style.display = "block";
+        
+        // নির্দিষ্ট সেকশনে স্মুথভাবে স্ক্রল করে নিয়ে যাবে
+        targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    } else {
+        console.error("এই ID টি পাওয়া যায়নি: " + sectionId);
+    }
 }
