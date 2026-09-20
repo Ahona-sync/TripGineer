@@ -38,25 +38,19 @@ body {
 
 .logo h2 {
     font-size: 30px;
-
-    color: #123d4a;
-
+    color: #222222; /* Trip-এর জন্য কালো রঙ */
     letter-spacing: -1px;
 }
 
 .logo h2 span {
-    color: #16877c;
+    color: #e62020; /* Gineer-এর জন্য লাল রঙ */
 }
 
 .logo p {
     font-size: 13px;
-
     margin-top: 2px;
-
     color: #555;
 }
-
-
 /* ================= NAVIGATION ================= */
 
 nav {
@@ -1209,9 +1203,16 @@ nav > a:hover {
 
 .holiday-calendar-section {
     padding: 90px 7% 100px;
-    background: #f8f9fa;
+    
+    
+    background-image: 
+        linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), 
+        url('https://i.pinimg.com/originals/a1/05/ae/a105ae2d514a73ae3b72b2fc0c1c40ae.jpg'); 
+        
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
 }
-
 
 /* ================= HEADER ================= */
 
@@ -2629,18 +2630,120 @@ nav > a:hover {
 }
 
 
-/* ================= NEWSLETTER LINE ================= */
+/* =====================================================
+   NEWSLETTER SECTION CSS
+===================================================== */
 
-.newsletter-red-line {
-    width: 50px;
-
-    height: 3px;
-
-    background: #e31b23;
-
-    margin: 0 auto 18px;
+.newsletter-section {
+    background-color: #f4f6f8; /* একটি হালকা সুন্দর ব্যাকগ্রাউন্ড কালার */
+    padding: 80px 20px;
+    text-align: center; /* সবকিছু মাঝখানে আনার জন্য */
 }
 
+.newsletter-content {
+    max-width: 700px;
+    margin: 0 auto; /* কন্টেন্টগুলোকে ঠিক মাঝখানে রাখার জন্য */
+}
+
+/* Small Title */
+.newsletter-small-title {
+    color: #6f8b4a; /* সবুজ রঙের একটি শেড */
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Main Heading */
+.newsletter-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    color: #222;
+    margin: 0 0 20px 0;
+}
+
+/* Red Line (Centered) */
+.newsletter-red-line {
+    width: 70px;
+    height: 3px;
+    background-color: #d62828;
+    margin: 0 auto 25px auto; /* এটি লাইনটিকে একদম মাঝখানে আনবে */
+}
+
+/* Description Text */
+.newsletter-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* Form Layout (Flexbox) */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* ইনপুট এবং বাটনের মাঝে স্পেস */
+    margin-bottom: 15px;
+}
+
+/* Email Input Box */
+.newsletter-form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px; /* চারপাশ গোলাকার করার জন্য */
+    outline: none;
+    transition: 0.3s;
+}
+
+.newsletter-form input:focus {
+    border-color: #d62828; /* টাইপ করার সময় বর্ডারের কালার পাল্টাবে */
+    box-shadow: 0 0 8px rgba(214, 40, 40, 0.2);
+}
+
+/* Subscribe Button */
+.newsletter-form button {
+    background-color: #d62828;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #b51d1d; /* মাউস নিলে রঙ একটু গাঢ় হবে */
+    box-shadow: 0 5px 15px rgba(214, 40, 40, 0.3);
+}
+
+/* Note Text */
+.newsletter-note {
+    font-size: 13px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* =====================================================
+   RESPONSIVE (For Mobile)
+===================================================== */
+@media (max-width: 600px) {
+    .newsletter-form {
+        flex-direction: column; /* মোবাইলে ইনপুট এবং বাটন ওপর-নিচ হবে */
+        align-items: center;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 
 /* ================= MOBILE ================= */
 

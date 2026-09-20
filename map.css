@@ -486,36 +486,45 @@ body {
 /* ================= FOOTER ================= */
 
 .map-footer {
-    background: #1e1e1e;
-
+    background: #1e1e1e; /* Tomar ager dark background i rakhlam */
     color: white;
-
     text-align: center;
-
     padding: 40px 20px;
-
     margin-top: 50px;
 }
 
+/* TripGineer text er design */
 .map-footer h3 {
-    font-size: 25px;
-
-    margin-bottom: 8px;
+    font-size: 38px;
+    font-family: 'Arial Black', Impact, sans-serif; /* Chobir moto bold font */
+    font-weight: 900;
+    color: #ffffff; /* Dark background e sada korlam, light background hole #222 dibe */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
 }
 
-.map-footer p {
-    color: #aaa;
-
-    margin-bottom: 20px;
+/* Gineer text er lal rong */
+.map-footer h3 .red-text {
+    color: #e62020;
+    font-size: inherit; 
 }
 
+/* Explore Chattogram text er design */
+.map-footer p.tagline {
+    color: #aaaaaa;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    letter-spacing: 6px; /* Chobir moto letter gulor majhe faka jayga */
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+/* Copyright ba onnanno text */
 .map-footer span {
     color: #777;
-
     font-size: 12px;
 }
-
-
 /* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
